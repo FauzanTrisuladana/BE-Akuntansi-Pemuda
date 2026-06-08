@@ -9,28 +9,12 @@ use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 $notFoundMessageByModel = function (?string $baseName): string {
     return match ($baseName) {
-        'Anggota' => 'Anggota tidak ditemukan',
-        'Coa' => 'Akun COA tidak ditemukan',
-        'DetailTransaksiLain' => 'Detail transaksi tidak ditemukan',
-        'Jabatan' => 'Jabatan tidak ditemukan',
-        'JabatanAnggota' => 'Jabatan anggota tidak ditemukan',
-        'JenisTransaksi' => 'Jenis transaksi tidak ditemukan',
-        'JurnalTemplate' => 'Template jurnal tidak ditemukan',
-        'KategoriCoaDefault' => 'Kategori COA default tidak ditemukan',
-        'Koperasi' => 'Koperasi tidak ditemukan',
-        'PeriodeBuku' => 'Periode buku tidak ditemukan',
-        'ProdukPinjaman' => 'Produk pinjaman tidak ditemukan',
-        'ProdukSimpanan' => 'Produk simpanan tidak ditemukan',
-        'RekeningPinjaman' => 'Rekening pinjaman tidak ditemukan',
-        'RekeningSimpanan' => 'Rekening simpanan tidak ditemukan',
-        'Role' => 'Peran tidak ditemukan',
-        'SaldoSimpananPeriode' => 'Saldo simpanan per periode tidak ditemukan',
-        'TagihanPinjaman' => 'Tagihan pinjaman tidak ditemukan',
-        'TagihanSimpanan' => 'Tagihan simpanan tidak ditemukan',
-        'TransaksiLain' => 'Transaksi lain tidak ditemukan',
-        'TransaksiPinjaman' => 'Transaksi pinjaman tidak ditemukan',
-        'TransaksiSimpanan' => 'Transaksi simpanan tidak ditemukan',
         'User' => 'User tidak ditemukan',
+        'PenanggungJawab' => 'Penanggung jawab tidak ditemukan',
+        'Akun' => 'Akun tidak ditemukan',
+        'RiilHistory' => 'Riil history tidak ditemukan',
+        'Transaksi' => 'Transaksi tidak ditemukan',
+        'MutasiRekening' => 'Mutasi rekening tidak ditemukan',
         default => 'Data tidak ditemukan',
     };
 };

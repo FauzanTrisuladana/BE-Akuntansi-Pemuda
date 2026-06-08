@@ -52,45 +52,43 @@ return [
     ],
 
     'attributes' => [
-        'user_id' => 'user',
-        'role_id' => 'role',
-        'nama' => 'nama',
-        'ktp' => 'no. KTP',
-        'email' => 'email',
-        'telp' => 'no. telepon',
-        'gender' => 'gender',
-        'photo_profile' => 'photo profile',
-        'status' => 'status',
-        'tanggal_masuk' => 'tanggal masuk',
-        'tanggal_keluar' => 'tanggal keluar',
+        // Users table
         'name' => 'nama',
-        'search' => 'pencarian',
-        'permissions' => 'daftar permission',
-        'class' => 'class permission',
-        'level' => 'level permission',
+        'username' => 'username',
+        'email' => 'email',
+        'role' => 'role',
+        'status' => 'status',
+        'profile_image' => 'foto profil',
+        'provider' => 'provider',
+        'id_provider' => 'ID provider',
         'password' => 'password',
-        'id_token' => 'ID token',
-        'device_name' => 'nama perangkat',
-        'koperasi_id' => 'koperasi',
-        'nama_posisi' => 'nama posisi',
-        'jenis_posisi' => 'jenis posisi',
-        'multiple' => 'multiple',
-        'tipe' => 'tipe',
-        'suku_bunga' => 'suku bunga',
+        'activated_at' => 'waktu aktivasi',
+        // Penanggung Jawab table
+        'nama' => 'nama',
+        'valuasi_transaksi' => 'valuasi transaksi',
+        // Akun table
+        'riil_terakhir' => 'riil terakhir',
+        'nama_akun' => 'nama akun',
+        'kas' => 'kas',
+        // Riil History table
+        'akun_id' => 'akun',
+        'date' => 'tanggal',
+        'verified' => 'verified',
+        'riil' => 'riil',
+        // Transaksi table
+        'penginput_id' => 'penginput',
+        'penanggung_jawab_id' => 'penanggung jawab',
+        'deskripsi' => 'deskripsi',
+        'jenis_transaksi' => 'jenis transaksi',
+        'jumlah' => 'jumlah',
+        'bukti' => 'bukti',
+        // Mutasi Rekening table
+        'akun_debit_id' => 'akun debit',
+        'akun_kredit_id' => 'akun kredit',
         'keterangan' => 'keterangan',
-        'anggota_id' => 'anggota',
-        'anggota' => 'anggota',
-        'jabatan_id' => 'jabatan',
-        'mulai' => 'tahun mulai',
-        'selesai' => 'tahun selesai',
     ],
 
     'custom' => [
-        'mulai' => [
-            'date_format' => ':attribute harus berupa tahun.',
-        ],
-        'selesai' => [
-            'date_format' => ':attribute harus berupa tahun.',
-        ],
+
     ],
 ];
