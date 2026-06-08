@@ -21,8 +21,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('akun_debit_id')->references('id')->on('akun')->onDelete('set null');
-            $table->foreign('akun_kredit_id')->references('id')->on('akun')->onDelete('set null');
+            $table->foreign('akun_debit_id')->references('id')->on('akun')->onDelete('cascade');
+            $table->foreign('akun_kredit_id')->references('id')->on('akun')->onDelete('cascade');
         });
     }
 

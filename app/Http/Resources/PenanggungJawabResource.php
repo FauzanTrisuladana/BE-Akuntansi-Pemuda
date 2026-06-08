@@ -1,10 +1,10 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 
-class {{ class }} extends ApiResource
+class PenanggungJawabResource extends ApiResource
 {
     /**
      * Transform the resource into an array.
@@ -15,7 +15,8 @@ class {{ class }} extends ApiResource
     {
         return [
             'id' => $this->whenHas('id'),
-            {{ fields }}
+            'nama' => $this->whenHas('nama'),
+            'valuasi_transaksi' => $this->whenHas('valuasi_transaksi'),
         ];
     }
 }

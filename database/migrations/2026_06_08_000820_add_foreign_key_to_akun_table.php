@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('akun', function (Blueprint $table) {
-            $table->foreign('riil_terakhir')->references('id')->on('riil_history')->onDelete('set null');
+            $table->foreign('riil_terakhir')->references('id')->on('riil_history')->onDelete('cascade');
         });
     }
 

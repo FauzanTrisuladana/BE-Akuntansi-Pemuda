@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('akun_id')->references('id')->on('akun')->onDelete('set null');
+            $table->foreign('akun_id')->references('id')->on('akun')->onDelete('cascade');
             $table->unique(['akun_id', 'date']);
         });
     }

@@ -24,9 +24,9 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('akun_id')->references('id')->on('akun')->onDelete('set null');
-            $table->foreign('penginput_id')->references('id')->on('users')->onDelete('set null');
-            $table->foreign('penanggung_jawab_id')->references('id')->on('penanggung_jawab')->onDelete('set null');
+            $table->foreign('akun_id')->references('id')->on('akun')->onDelete('cascade');
+            $table->foreign('penginput_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('penanggung_jawab_id')->references('id')->on('penanggung_jawab')->onDelete('cascade');
         });
     }
 
