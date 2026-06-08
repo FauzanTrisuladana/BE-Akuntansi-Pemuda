@@ -65,7 +65,7 @@ class AuthController extends Controller
             abort(401, 'Google token payload tidak lengkap');
         }
 
-        $user = User::firstOrCreate(
+        $user = User::withTrashed()->firstOrCreate(
             [
                 'email' => $payload['email'],
             ],

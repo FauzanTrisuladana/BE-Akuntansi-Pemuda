@@ -17,11 +17,30 @@ Route::get('/status', function () {
  * Post /api/auth/login-google -> login pake google
  * Post /api/auth/logout -> logout user
  */
-Route::prefix('auth')->group(function () {
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/login-google', [AuthController::class, 'loginGoogle']);
+Route::prefix('auth')->controller(AuthController::class)->group(function () {
+    Route::post('/login', 'login');
+    Route::post('/login-google', 'loginGoogle');
 
     Route::middleware('auth:sanctum')->group(function () {
-        Route::post('/logout', [AuthController::class, 'logout']);
+        Route::post('/logout', 'logout');
     });
+});
+
+
+Route::middleware('auth:sanctum')->group(function () {
+
+    /**
+     * Profile routes
+     * Get /api/profile/me -> get profile user yang sedang login
+     * Put /api/profile/update -> update profile user yang sedang login
+     * Put /api/profile/update-password -> update password user yang sedang login
+     */
+    Route::prefix('profile')->controller(ProfileController::class)->group(function () {
+        Route::get('/me', 'me');
+        Route::put('/update', 'update');
+        Route::put('/update-password', 'updatePassword');
+        Route::delete('/delete', 'delete');
+    });
+
+
 });

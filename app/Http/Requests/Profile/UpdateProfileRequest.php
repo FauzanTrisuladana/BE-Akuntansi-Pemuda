@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Profile;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginGoogleRequest extends FormRequest
+class UpdateProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -37,9 +37,17 @@ class LoginGoogleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_token' => [
+            'name' => [
                 'required',
-                'string'
+                'string',
+                'max:255'
+            ],
+
+            'email' => [
+                'required',
+                'email',
+                'max:255',
+                'unique:users,email,' . $this->user()->id
             ],
         ];
     }
@@ -55,10 +63,9 @@ class LoginGoogleRequest extends FormRequest
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
-            // ex:
-            // if ($this->something_invalid) {
-            //     $validator->errors()->add('field', 'Custom error');
-            // }
+            if ($this->email !== $this->user()->email && $this->user()->password === null) {
+                $validator->errors()->add('email', 'Untuk mengubah email, anda harus memiliki password. Silakan atur password terlebih dahulu sebelum mengubah email.');
+            }
         });
     }
 

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Profile;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Hash;
 
-class LoginGoogleRequest extends FormRequest
+class UpdatePasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -37,9 +38,15 @@ class LoginGoogleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_token' => [
-                'required',
+            'current_password' => [
+                $this->user()->password ? 'required' : 'nullable',
                 'string'
+            ],
+            'password' => [
+                'required',
+                'string',
+                'min:8',
+                'confirmed'
             ],
         ];
     }
@@ -55,10 +62,9 @@ class LoginGoogleRequest extends FormRequest
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
-            // ex:
-            // if ($this->something_invalid) {
-            //     $validator->errors()->add('field', 'Custom error');
-            // }
+            if ($this->user()->password && !Hash::check($this->current_password, $this->user()->password)) {
+                $validator->errors()->add('current_password', 'Password saat ini salah');
+            }
         });
     }
 
