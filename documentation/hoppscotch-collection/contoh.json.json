@@ -1,0 +1,113 @@
+{
+  "v": 12,
+  "id": "cmovi384w3iryh01lmgqrnap4",
+  "name": "profile - profile",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "cmovi385i3is0h01lte3y0jee",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Me",
+      "method": "GET",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/me",
+      "responses": {},
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "cmovi385j3is2h01lsyzk9cz4",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"simpanan percobaan2\",\n  \"tipe\": \"sukarela\", //in:wajib,sukarela,pokok\n  \"jumlah\": 50000, //nullable\n  \"suku_bunga\": 2, // nullable\n  \"keterangan\": \"coba sek bolo\" // nullable\n}\n",
+        "contentType": "application/json"
+      },
+      "name": "Store blm",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "cmovi385j3is4h01l96r4gunf",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"simpanan percobaan2\",\n  \"tipe\": \"sukarela\", //in:wajib,sukarela,pokok\n  \"jumlah\": 5000, //nullable\n  \"suku_bunga\": 2, // nullable\n  \"keterangan\": \"coba sek bolo\" // nullable\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update blm",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/8",
+      "responses": {},
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "cmovi385j3is6h01ldyc47g9e",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete blm",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/8",
+      "responses": {},
+      "testScript": "",
+      "description": null,
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "auth": {
+    "authType": "bearer",
+    "token": "<<token>>",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/profile",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

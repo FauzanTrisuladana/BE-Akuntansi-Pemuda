@@ -1,0 +1,47 @@
+{
+  "v": 12,
+  "id": "status-check-collection",
+  "name": "Status - Status Check",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "status-get",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Status",
+      "method": "GET",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>>/status",
+      "responses": {},
+      "testScript": "",
+      "description": "Check API status",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "auth": {
+    "authType": "bearer",
+    "token": "<<token>>",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/api",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

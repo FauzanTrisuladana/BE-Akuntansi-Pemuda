@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "message": "Berhasil",
+  "data": {
+    "id": 1,
+    "name": "Test User Biasa",
+    "username": "testuser_biasa",
+    "email": "test@example.com",
+    "role": "biasa",
+    "status": "Aktif",
+    "profile_image": null
+  },
+  "auth": {
+    "token": "7|z18kEqcPcTn5MjBDj1q9fjBQD3ZHPKnzB3TKMInK58742316",
+    "token_type": "Bearer"
+  }
+}
