@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Profile\UpdateProfileRequest;
 use App\Http\Requests\Profile\UpdatePasswordRequest;
+use App\Http\Resources\ApiResource;
 use App\Http\Resources\UserResource;
 
 class ProfileController extends Controller
@@ -15,7 +16,11 @@ class ProfileController extends Controller
     */
     public function me(Request $request)
     {
-        return (new UserResource($request->user()))
+        $user = $request->user();
+
+        $user->has_password = $user->password ? true : false;
+
+        return (new UserResource($user))
             ->message('Profile berhasil diambil');
     }
 
@@ -30,6 +35,8 @@ class ProfileController extends Controller
         $user = $request->user();
 
         $user->update($validated);
+
+        $user->has_password = $user->password ? true : false;
 
         return (new UserResource($user))
             ->message('Profile berhasil diupdate');
@@ -49,6 +56,8 @@ class ProfileController extends Controller
             'password' => $validated['password'],
         ]);
 
+        $user->has_password = $user->password ? true : false;
+
         return (new UserResource($user))
             ->message('Password berhasil diupdate');
     }
@@ -67,8 +76,7 @@ class ProfileController extends Controller
 
         $user->delete();
 
-        return response()->json([
-            'message' => 'Akun berhasil dihapus',
-        ]);
+        return (new ApiResource(null))
+            ->message('Akun berhasil dihapus');
     }
 }

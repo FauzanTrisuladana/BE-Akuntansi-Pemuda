@@ -20,6 +20,7 @@ class UserResource extends ApiResource
             'role' => $this->whenHas('role'),
             'status' => $this->whenHas('status'),
             'profile_image' => $this->whenHas('profile_image'),
+            'has_password' => $this->whenHas('has_password'),
         ];
     }
 }
