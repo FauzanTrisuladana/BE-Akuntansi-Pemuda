@@ -44,6 +44,25 @@ class User extends Authenticatable
     ];
 
     /**
+     * The accessors to append to the model's array form.
+     *
+     * @var list<string>
+     */
+    protected $appends = [
+        'has_password',
+    ];
+
+    /**
+     * Determine whether the user has a password set.
+     */
+    protected function hasPassword(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->password !== null && $this->password !== '',
+        );
+    }
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>

@@ -18,8 +18,6 @@ class ProfileController extends Controller
     {
         $user = $request->user();
 
-        $user->has_password = $user->password ? true : false;
-
         return (new UserResource($user))
             ->message('Profile berhasil diambil');
     }
@@ -35,8 +33,6 @@ class ProfileController extends Controller
         $user = $request->user();
 
         $user->update($validated);
-
-        $user->has_password = $user->password ? true : false;
 
         return (new UserResource($user))
             ->message('Profile berhasil diupdate');
@@ -55,8 +51,6 @@ class ProfileController extends Controller
         $user->update([
             'password' => $validated['password'],
         ]);
-
-        $user->has_password = $user->password ? true : false;
 
         return (new UserResource($user))
             ->message('Password berhasil diupdate');

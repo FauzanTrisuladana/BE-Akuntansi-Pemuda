@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 class RoleMiddleware
 {
     /**
-     * @param  array<int, string>  ...$roles
+     * @param  string  ...$roles
      */
-    public function handle(Request $request, Closure $next, ...$roles): Response
+    public function handle(Request $request, Closure $next, string ...$roles): Response
     {
         $roles = $this->normalizeRoles($roles);
 

@@ -51,6 +51,9 @@ class ApiResource extends JsonResource
 
     /**
      * Return a collection that also includes `status` and `message`.
+     *
+     * @param  \Illuminate\Support\Collection|\Illuminate\Contracts\Pagination\LengthAwarePaginator|array  $resource
+     * @return ApiResourceCollection
      */
     public static function collection($resource)
     {

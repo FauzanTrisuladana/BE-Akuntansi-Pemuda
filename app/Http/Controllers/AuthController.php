@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\LoginGoogleRequest;
 use App\Http\Resources\ApiResource;
 use App\Http\Resources\UserResource;
+use App\Models\User;
 
 class AuthController extends Controller
 {

@@ -1,0 +1,12 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app
+        - config
+        - routes
+
+    # Level 9 adalah yang paling ketat, Anda bisa mulai dari level 0 atau 5 dulu
+    level: 5
