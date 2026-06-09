@@ -1,6 +1,9 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\{
+    AuthController,
+    ProfileController
+};
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -42,5 +45,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/delete', 'delete');
     });
 
-
+    /**
+     * Routes untuk role bendahara
+     * Hanya bisa diakses oleh user dengan role bendahara
+     */
+    Route::middleware('role:bendahara')->group(function () {
+        // Route untuk bendahara
+    });
 });

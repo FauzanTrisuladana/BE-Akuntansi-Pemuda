@@ -16,7 +16,6 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Test User Biasa',
-            'username' => 'testuser_biasa',
             'email' => 'test@example.com',
             'role' => 'biasa',
             'status' => 'Aktif',
@@ -26,7 +25,6 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'Test User Bendahara',
-            'username' => 'testuser_bendahara',
             'email' => 'fauzantrisuladana@gmail.com',
             'role' => 'bendahara',
             'status' => 'Aktif',
@@ -36,7 +34,6 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'User Pending',
-            'username' => 'user_pending',
             'email' => 'pending@example.com',
             'role' => 'biasa',
             'status' => 'Pending',
@@ -45,7 +42,6 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'User Tidak Aktif',
-            'username' => 'user_tidak_aktif',
             'email' => 'inactive@example.com',
             'role' => 'bendahara',
             'status' => 'Tidak Aktif',

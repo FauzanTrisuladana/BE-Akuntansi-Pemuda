@@ -1,0 +1,108 @@
+{
+  "v": 12,
+  "id": "profile-collection",
+  "name": "Profile - Profile Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "profile-me",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Profile",
+      "method": "GET",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>>/me",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil profile user yang sedang login",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "profile-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"name\": \"Nama User\",\n  \"email\": \"user@example.com\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update Profile",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>>/update",
+      "responses": {},
+      "testScript": "",
+      "description": "Update profile user yang sedang login (name, email)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "profile-update-password",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"current_password\": \"passwordlama123\",\n  \"password\": \"passwordbaru123\",\n  \"password_confirmation\": \"passwordbaru123\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update Password",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>>/update-password",
+      "responses": {},
+      "testScript": "",
+      "description": "Update password user yang sedang login",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "profile-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete Account",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>>/delete",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus akun user yang sedang login (soft delete)",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/profile",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}
