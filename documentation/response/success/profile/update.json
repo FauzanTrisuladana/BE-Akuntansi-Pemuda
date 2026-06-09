@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "Profile berhasil diupdate",
+  "data": {
+    "id": 2,
+    "name": "Fauzan Trisuladana",
+    "email": "fauzantrisuladana@gmail.com",
+    "role": "bendahara",
+    "status": "Aktif",
+    "profile_image": null,
+    "has_password": true
+  }
+}

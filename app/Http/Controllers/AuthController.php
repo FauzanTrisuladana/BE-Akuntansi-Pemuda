@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\LoginGoogleRequest;
 use App\Http\Resources\ApiResource;
@@ -20,11 +21,11 @@ class AuthController extends Controller
     {
         $validated = $request->validated();
 
-        if (!auth()->attempt($validated)) {
+        $user = User::withTrashed()->where('email', $validated['email'])->first();
+
+        if (!$user || !Hash::check($validated['password'], $user->password)) {
             abort(401, 'Email atau password salah');
         }
-
-        $user = auth()->user();
 
         if ($user->status !== 'Aktif') {
             abort(403, 'Akun Anda belum aktif. Silakan hubungi admin untuk mengaktifkan akun Anda.');

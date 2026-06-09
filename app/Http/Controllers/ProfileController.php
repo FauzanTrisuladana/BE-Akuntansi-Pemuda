@@ -70,6 +70,8 @@ class ProfileController extends Controller
 
         $user->delete();
 
+        $request->user()->currentAccessToken()->delete();
+
         return (new ApiResource(null))
             ->message('Akun berhasil dihapus');
     }

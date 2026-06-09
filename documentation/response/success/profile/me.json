@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "Profile berhasil diambil",
+  "data": {
+    "id": 2,
+    "name": "Test User Bendahara",
+    "email": "fauzantrisuladana@gmail.com",
+    "role": "bendahara",
+    "status": "Aktif",
+    "profile_image": null,
+    "has_password": true
+  }
+}
