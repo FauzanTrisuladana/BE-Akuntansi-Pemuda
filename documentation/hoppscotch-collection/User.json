@@ -1,0 +1,171 @@
+{
+  "v": 12,
+  "id": "user-collection",
+  "name": "User - User Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "user-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Users",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "role[]",
+          "value": "biasa",
+          "active": true
+        },
+        {
+          "key": "role[]",
+          "value": "bendahara",
+          "active": true
+        },
+        {
+          "key": "status[]",
+          "value": "Aktif",
+          "active": true
+        },
+        {
+          "key": "status[]",
+          "value": "Pending",
+          "active": true
+        },
+        {
+          "key": "status[]",
+          "value": "Tidak Aktif",
+          "active": true
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar user dengan filter dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "user-store",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"User Baru\",\n  \"email\": \"userbaru@example.com\",\n  \"role\": \"biasa\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Create User",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Membuat user baru (default status: Aktif)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "user-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"User Update\",\n  \"email\": \"userupdate@example.com\",\n  \"role\": \"bendahara\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update User",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Update user berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "user-toggle-status",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Toggle Status User",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1/toggle-status",
+      "responses": {},
+      "testScript": "",
+      "description": "Toggle status user (Aktif ↔ Tidak Aktif)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "user-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete User",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus user berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/user",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}
