@@ -9,4 +9,4 @@ parameters:
         - routes
 
     # Level 9 adalah yang paling ketat, Anda bisa mulai dari level 0 atau 5 dulu
-    level: 9
+    level: 7
