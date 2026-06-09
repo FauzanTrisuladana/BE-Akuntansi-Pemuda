@@ -9,8 +9,6 @@ class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -21,8 +19,6 @@ class LoginRequest extends FormRequest
      * Prepare the data for validation.
      *
      * This method is called before validation is applied.
-     *
-     * @return void
      */
     protected function prepareForValidation(): void
     {
@@ -40,12 +36,12 @@ class LoginRequest extends FormRequest
             'email' => [
                 'required',
                 'string',
-                'email'
+                'email',
             ],
             'password' => [
                 'required',
                 'string',
-                'min:8'
+                'min:8',
             ],
         ];
     }
@@ -72,8 +68,6 @@ class LoginRequest extends FormRequest
      * Handle a passed validation attempt.
      *
      * This method is called after validation is successful.
-     *
-     * @return void
      */
     protected function passedValidation(): void
     {

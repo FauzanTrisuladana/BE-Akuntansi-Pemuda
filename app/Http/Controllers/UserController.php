@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\User\{
-    IndexUserRequest,
-    StoreUserRequest,
-    UpdateUserRequest
-};
-use App\Http\Resources\UserResource;
+use App\Http\Requests\User\IndexUserRequest;
+use App\Http\Requests\User\StoreUserRequest;
+use App\Http\Requests\User\UpdateUserRequest;
 use App\Http\Resources\ApiResource;
+use App\Http\Resources\ApiResourceCollection;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 
 class UserController extends Controller
@@ -18,7 +16,7 @@ class UserController extends Controller
      * Display a listing of the resource.
      * Get /api/user
      */
-    public function index(IndexUserRequest $request)
+    public function index(IndexUserRequest $request): ApiResourceCollection
     {
         $validated = $request->validated();
 
@@ -27,8 +25,8 @@ class UserController extends Controller
             role: $validated['role'] ?? null,
             status: $validated['status'] ?? null,
         )
-        ->orderBy('name')
-        ->paginate($validated['per_page']);
+            ->orderBy('name')
+            ->paginate($validated['per_page']);
 
         return UserResource::collection($users)
             ->message('Data user berhasil diambil');
@@ -38,7 +36,7 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      * Post /api/user
      */
-    public function store(StoreUserRequest $request)
+    public function store(StoreUserRequest $request): UserResource
     {
         $validated = $request->validated();
 
@@ -58,7 +56,7 @@ class UserController extends Controller
      * Update the specified resource in storage.
      * Put /api/user/{id}
      */
-    public function update(UpdateUserRequest $request, string $id)
+    public function update(UpdateUserRequest $request, string $id): UserResource
     {
         $validated = $request->validated();
 
@@ -74,9 +72,13 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      * Delete /api/user/{id}
      */
-    public function destroy(string $id)
+    public function destroy(string $id): ApiResource
     {
         $user = User::findOrFail($id);
+
+        $user->update([
+            'status' => 'Tidak Aktif',
+        ]);
 
         $user->delete();
 
@@ -88,12 +90,12 @@ class UserController extends Controller
      * Toggle the status of the specified resource in storage.
      * Put /api/user/{id}/toggle-status
      */
-    public function toggleStatus(string $id)
+    public function toggleStatus(string $id): UserResource
     {
         $user = User::findOrFail($id);
 
         $user->update([
-            'status' => $user->status === 'Aktif' ? 'Tidak Aktif' : 'Aktif'
+            'status' => $user->status === 'Aktif' ? 'Tidak Aktif' : 'Aktif',
         ]);
 
         return (new UserResource($user))

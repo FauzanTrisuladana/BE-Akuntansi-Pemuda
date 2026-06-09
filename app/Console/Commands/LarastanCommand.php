@@ -12,8 +12,14 @@ class LarastanCommand extends Command
 
     protected $description = 'Jalankan analisis kode statis menggunakan Larastan';
 
-    public function handle()
+    public function handle(): int
     {
+        $this->info('🎨 1. Menjalankan Laravel Pint (Auto-Fix Code Style)...');
+        // Jalankan Pint untuk memperbaiki kode secara otomatis
+        $pint = new Process([base_path('vendor/bin/pint')]);
+        $pint->run();
+        $this->info('✅ Selesai merapikan kode.');
+
         $this->info('🚀 Sedang memeriksa kode dengan Larastan...');
 
         // Pastikan Anda sudah membuat file phpstan.neon agar 'analyse' otomatis tahu folder mana saja yang dicek

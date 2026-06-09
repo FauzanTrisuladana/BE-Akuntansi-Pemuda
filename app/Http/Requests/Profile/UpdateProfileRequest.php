@@ -9,8 +9,6 @@ class UpdateProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -21,8 +19,6 @@ class UpdateProfileRequest extends FormRequest
      * Prepare the data for validation.
      *
      * This method is called before validation is applied.
-     *
-     * @return void
      */
     protected function prepareForValidation(): void
     {
@@ -40,14 +36,14 @@ class UpdateProfileRequest extends FormRequest
             'name' => [
                 'required',
                 'string',
-                'max:255'
+                'max:255',
             ],
 
             'email' => [
                 'required',
                 'email',
                 'max:255',
-                'unique:users,email,' . $this->user()->id
+                'unique:users,email,'.$this->user()->id,
             ],
         ];
     }
@@ -73,8 +69,6 @@ class UpdateProfileRequest extends FormRequest
      * Handle a passed validation attempt.
      *
      * This method is called after validation is successful.
-     *
-     * @return void
      */
     protected function passedValidation(): void
     {

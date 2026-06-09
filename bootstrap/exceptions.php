@@ -34,7 +34,7 @@ return function (Exceptions $exceptions) use ($notFoundMessageByModel): void {
         if ($firstMessage === '') {
             $message = 'Validasi gagal';
         } elseif ($remainingCount > 0) {
-            $message = $firstMessage . ', dan ' . $remainingCount . ' kesalahan lainnya';
+            $message = $firstMessage.', dan '.$remainingCount.' kesalahan lainnya';
         } else {
             $message = $firstMessage;
         }
@@ -87,7 +87,7 @@ return function (Exceptions $exceptions) use ($notFoundMessageByModel): void {
     });
 
     $exceptions->render(function (Throwable $e, Request $request) {
-        if (!$request->is('api/*') && !$request->expectsJson()) {
+        if (! $request->is('api/*') && ! $request->expectsJson()) {
             return null;
         }
 

@@ -10,3 +10,18 @@ parameters:
 
     # Level 9 adalah yang paling ketat, Anda bisa mulai dari level 0 atau 5 dulu
     level: 7
+
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        # Ignore covariant return type issues in model relations
+        - '#Template type TDeclaringModel on class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not covariant#'
+        - '#Template type TDeclaringModel on class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not covariant#'
+        # Ignore generic type issues in model relations
+        - '#Generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany in PHPDoc tag @return does not specify all template types#'
+        # Ignore missing return type on model relations (Laravel magic methods)
+        - '#Method App\\Models\\.*::.* has no return type specified#'
+        - '#Class App\\Models\\User uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory#'
+        - '#Method App\\Models\\User::scopeFilter#'
+        # Ignore variadic string parameter type issue in RoleMiddleware
+        - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'

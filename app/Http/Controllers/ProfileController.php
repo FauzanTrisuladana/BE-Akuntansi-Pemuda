@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\Profile\UpdateProfileRequest;
 use App\Http\Requests\Profile\UpdatePasswordRequest;
+use App\Http\Requests\Profile\UpdateProfileRequest;
 use App\Http\Resources\ApiResource;
 use App\Http\Resources\UserResource;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     /**
-    * Api untuk mengambil profile user yang sedang login.
-    * Get /api/profile/me
-    */
-    public function me(Request $request)
+     * Api untuk mengambil profile user yang sedang login.
+     * Get /api/profile/me
+     */
+    public function me(Request $request): UserResource
     {
         $user = $request->user();
 
@@ -23,10 +23,10 @@ class ProfileController extends Controller
     }
 
     /**
-    * Api untuk update profile user yang sedang login.
-    * Put /api/profile/update
-    */
-    public function update(UpdateProfileRequest $request)
+     * Api untuk update profile user yang sedang login.
+     * Put /api/profile/update
+     */
+    public function update(UpdateProfileRequest $request): UserResource
     {
         $validated = $request->validated();
 
@@ -42,7 +42,7 @@ class ProfileController extends Controller
      * Api untuk update password user yang sedang login.
      * Put /api/profile/update-password
      */
-    public function updatePassword(UpdatePasswordRequest $request)
+    public function updatePassword(UpdatePasswordRequest $request): UserResource
     {
         $validated = $request->validated();
 
@@ -60,7 +60,7 @@ class ProfileController extends Controller
      * Api untuk delete akun user yang sedang login.
      * Delete /api/profile/delete
      */
-    public function delete(Request $request)
+    public function delete(Request $request): ApiResource
     {
         $user = $request->user();
 

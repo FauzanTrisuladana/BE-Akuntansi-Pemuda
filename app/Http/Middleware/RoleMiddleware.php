@@ -8,26 +8,23 @@ use Symfony\Component\HttpFoundation\Response;
 
 class RoleMiddleware
 {
-    /**
-     * @param  string  ...$roles
-     */
     public function handle(Request $request, Closure $next, string ...$roles): Response
     {
-        $roles = $this->normalizeRoles($roles);
+        $normalizedRoles = $this->normalizeRoles(...$roles);
 
         $user = $request->user() ?? auth('sanctum')->user();
 
-        if (!$user) {
+        if (! $user) {
             abort(401, 'Anda belum masuk atau sesi Anda telah berakhir.');
         }
 
-        if ($roles === []) {
+        if ($normalizedRoles === []) {
             return $next($request);
         }
 
         $userRole = (string) ($user->role ?? '');
 
-        if (!in_array($userRole, $roles, true)) {
+        if (! in_array($userRole, $normalizedRoles, true)) {
             abort(403, 'Anda tidak memiliki izin untuk mengakses sumber daya ini.');
         }
 
@@ -35,10 +32,9 @@ class RoleMiddleware
     }
 
     /**
-     * @param  array<int, string>  $roles
      * @return array<int, string>
      */
-    private function normalizeRoles(array $roles): array
+    private function normalizeRoles(string ...$roles): array
     {
         $normalized = [];
 

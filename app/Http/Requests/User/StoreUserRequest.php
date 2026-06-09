@@ -9,8 +9,6 @@ class StoreUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -21,8 +19,6 @@ class StoreUserRequest extends FormRequest
      * Prepare the data for validation.
      *
      * This method is called before validation is applied.
-     *
-     * @return void
      */
     protected function prepareForValidation(): void
     {
@@ -43,24 +39,24 @@ class StoreUserRequest extends FormRequest
             'nama' => [
                 'required',
                 'string',
-                'max:255'
+                'max:255',
             ],
             'email' => [
                 'required',
                 'string',
                 'email',
                 'max:255',
-                'unique:users,email'
+                'unique:users,email',
             ],
             'role' => [
                 'required',
                 'string',
-                'in:biasa,bendahara'
+                'in:biasa,bendahara',
             ],
             'status' => [
                 'required',
                 'string',
-                'in:Aktif,Tidak Aktif,Pending'
+                'in:Aktif,Tidak Aktif,Pending',
             ],
             'activated_at' => [
                 'required',
@@ -91,8 +87,6 @@ class StoreUserRequest extends FormRequest
      * Handle a passed validation attempt.
      *
      * This method is called after validation is successful.
-     *
-     * @return void
      */
     protected function passedValidation(): void
     {

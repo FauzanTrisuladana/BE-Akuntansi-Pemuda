@@ -2,8 +2,10 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Collection;
 
 class ApiResource extends JsonResource
 {
@@ -21,6 +23,8 @@ class ApiResource extends JsonResource
 
     /**
      * Add meta that always exists on the top-level response.
+     *
+     * @return array<string, mixed>
      */
     public function with(Request $request): array
     {
@@ -52,10 +56,9 @@ class ApiResource extends JsonResource
     /**
      * Return a collection that also includes `status` and `message`.
      *
-     * @param  \Illuminate\Support\Collection|\Illuminate\Contracts\Pagination\LengthAwarePaginator|array  $resource
-     * @return ApiResourceCollection
+     * @param  Collection<int, mixed>|LengthAwarePaginator<int, mixed>|array<int, mixed>  $resource
      */
-    public static function collection($resource)
+    public static function collection($resource): ApiResourceCollection
     {
         return new ApiResourceCollection($resource, static::class);
     }

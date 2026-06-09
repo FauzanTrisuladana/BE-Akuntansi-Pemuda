@@ -21,6 +21,8 @@ class ApiResourceCollection extends AnonymousResourceCollection
 
     /**
      * Add meta that always exists on the top-level response.
+     *
+     * @return array<string, mixed>
      */
     public function with(Request $request): array
     {
@@ -51,8 +53,12 @@ class ApiResourceCollection extends AnonymousResourceCollection
 
     /**
      * Add pagination information to the response if the collection is paginated.
+     *
+     * @param  array<string, mixed>  $paginated
+     * @param  array<string, mixed>  $default
+     * @return array<string, mixed>
      */
-    public function paginationInformation($request, $paginated, $default)
+    public function paginationInformation(Request $request, array $paginated, array $default): array
     {
         return [
             'meta' => [

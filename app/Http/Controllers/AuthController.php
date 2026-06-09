@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\LoginGoogleRequest;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Resources\ApiResource;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 
 class AuthController extends Controller
 {
@@ -17,13 +16,13 @@ class AuthController extends Controller
      * Api untuk login user dengan email dan password.
      * Post /api/auth/login
      */
-    public function login(LoginRequest $request)
+    public function login(LoginRequest $request): ApiResource
     {
         $validated = $request->validated();
 
         $user = User::withTrashed()->where('email', $validated['email'])->first();
 
-        if (!$user || !Hash::check($validated['password'], $user->password)) {
+        if (! $user || ! Hash::check($validated['password'], $user->password)) {
             abort(401, 'Email atau password salah');
         }
 
@@ -39,14 +38,14 @@ class AuthController extends Controller
                 'token_type' => 'Bearer',
             ],
         ])
-        ->message('Login berhasil');
+            ->message('Login berhasil');
     }
 
     /**
      * Api untuk login user dengan Google.
      * Post /api/auth/login-google
      */
-    public function loginGoogle(LoginGoogleRequest $request)
+    public function loginGoogle(LoginGoogleRequest $request): ApiResource
     {
         $validated = $request->validated();
 
@@ -55,7 +54,7 @@ class AuthController extends Controller
             'id_token' => $validated['id_token'],
         ]);
 
-        if (!$tokenInfoResponse->successful()) {
+        if (! $tokenInfoResponse->successful()) {
             abort(401, 'Google token tidak valid');
         }
 
@@ -65,7 +64,7 @@ class AuthController extends Controller
             abort(401, 'Google token audience tidak sesuai');
         }
 
-        if (!isset($payload['email'], $payload['sub'])) {
+        if (! isset($payload['email'], $payload['sub'])) {
             abort(401, 'Google token payload tidak lengkap');
         }
 
@@ -102,14 +101,14 @@ class AuthController extends Controller
                 'token_type' => 'Bearer',
             ],
         ])
-        ->message('Login dengan Google berhasil');
+            ->message('Login dengan Google berhasil');
     }
 
     /**
      * Api untuk logout user.
      * Post /api/auth/logout
      */
-    public function logout()
+    public function logout(): ApiResource
     {
         auth()->user()->currentAccessToken()->delete();
 

@@ -9,8 +9,6 @@ class IndexUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -21,8 +19,6 @@ class IndexUserRequest extends FormRequest
      * Prepare the data for validation.
      *
      * This method is called before validation is applied.
-     *
-     * @return void
      */
     protected function prepareForValidation(): void
     {
@@ -40,34 +36,34 @@ class IndexUserRequest extends FormRequest
             'page' => [
                 'required',
                 'integer',
-                'min:1'
+                'min:1',
             ],
             'per_page' => [
                 'required',
                 'integer',
                 'min:1',
-                'max:100'
+                'max:100',
             ],
             'search' => [
                 'sometimes',
                 'string',
-                'max:255'
+                'max:255',
             ],
             'role' => [
                 'required',
-                'array'
+                'array',
             ],
             'role.*' => [
                 'string',
-                'in:biasa,bendahara'
+                'in:biasa,bendahara',
             ],
             'status' => [
                 'required',
-                'array'
+                'array',
             ],
             'status.*' => [
                 'string',
-                'in:Aktif,Pending,Tidak Aktif'
+                'in:Aktif,Pending,Tidak Aktif',
             ],
         ];
     }
@@ -94,8 +90,6 @@ class IndexUserRequest extends FormRequest
      * Handle a passed validation attempt.
      *
      * This method is called after validation is successful.
-     *
-     * @return void
      */
     protected function passedValidation(): void
     {

@@ -10,8 +10,6 @@ class UpdatePasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
     public function authorize(): bool
     {
@@ -22,8 +20,6 @@ class UpdatePasswordRequest extends FormRequest
      * Prepare the data for validation.
      *
      * This method is called before validation is applied.
-     *
-     * @return void
      */
     protected function prepareForValidation(): void
     {
@@ -40,13 +36,13 @@ class UpdatePasswordRequest extends FormRequest
         return [
             'current_password' => [
                 $this->user()->password ? 'required' : 'nullable',
-                'string'
+                'string',
             ],
             'password' => [
                 'required',
                 'string',
                 'min:8',
-                'confirmed'
+                'confirmed',
             ],
         ];
     }
@@ -62,7 +58,7 @@ class UpdatePasswordRequest extends FormRequest
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
-            if ($this->user()->password && !Hash::check($this->current_password, $this->user()->password)) {
+            if ($this->user()->password && ! Hash::check($this->current_password, $this->user()->password)) {
                 $validator->errors()->add('current_password', 'Password saat ini salah');
             }
         });
@@ -72,8 +68,6 @@ class UpdatePasswordRequest extends FormRequest
      * Handle a passed validation attempt.
      *
      * This method is called after validation is successful.
-     *
-     * @return void
      */
     protected function passedValidation(): void
     {
