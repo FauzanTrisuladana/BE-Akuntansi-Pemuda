@@ -50,7 +50,7 @@ class IndexUserRequest extends FormRequest
                 'max:255',
             ],
             'role' => [
-                'required',
+                'sometimes',
                 'array',
             ],
             'role.*' => [
@@ -58,7 +58,7 @@ class IndexUserRequest extends FormRequest
                 'in:biasa,bendahara',
             ],
             'status' => [
-                'required',
+                'sometimes',
                 'array',
             ],
             'status.*' => [
