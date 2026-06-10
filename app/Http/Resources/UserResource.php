@@ -21,6 +21,8 @@ class UserResource extends ApiResource
             'status' => $this->whenHas('status'),
             'profile_image' => $this->whenHas('profile_image'),
             'has_password' => isset($this->has_password) ? (bool) $this->has_password : $this->whenHas('has_password'),
+
+            'transaksi' => TransaksiResource::collection($this->whenLoaded('transaksi')),
         ];
     }
 }

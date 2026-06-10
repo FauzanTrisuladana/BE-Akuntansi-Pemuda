@@ -19,7 +19,10 @@ class AkunResource extends ApiResource
             'nama_akun' => $this->whenHas('nama_akun'),
             'kas' => $this->whenHas('kas'),
 
+            'riil_terakhir' => new RiilHistoryResource($this->whenLoaded('riilHistory')),
             'riil_history' => RiilHistoryResource::collection($this->whenLoaded('riilHistory')),
+            'mutasi_debit' => MutasiRekeningResource::collection($this->whenLoaded('mutasiDebit')),
+            'mutasi_kredit' => MutasiRekeningResource::collection($this->whenLoaded('mutasiKredit')),
         ];
     }
 }
