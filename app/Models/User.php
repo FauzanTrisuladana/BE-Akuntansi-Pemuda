@@ -76,6 +76,11 @@ class User extends Authenticatable
         ];
     }
 
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class, 'penginput_id');
+    }
+
     public function scopeFilter($query, ?string $search = null, ?array $role = null, ?array $status = null)
     {
         if ($search) {

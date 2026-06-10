@@ -23,5 +23,8 @@ parameters:
         - '#Method App\\Models\\.*::.* has no return type specified#'
         - '#Class App\\Models\\User uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory#'
         - '#Method App\\Models\\User::scopeFilter#'
+        - '#Method App\\Models\\PenanggungJawab::scopeFilter#'
+        - '#Method App\\Models\\PenanggungJawab::transaksi#'
+        - '#Relation .transaksi. is not found in App\\Models\\PenanggungJawab#'
         # Ignore variadic string parameter type issue in RoleMiddleware
         - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'

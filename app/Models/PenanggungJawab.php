@@ -19,4 +19,18 @@ class PenanggungJawab extends Model
     protected $casts = [
         'valuasi_transaksi' => 'integer',
     ];
+
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class, 'penanggung_jawab_id');
+    }
+
+    public function scopeFilter($query, ?string $search = null)
+    {
+        if ($search) {
+            $query->where('nama', 'like', "%$search%");
+        }
+
+        return $query;
+    }
 }

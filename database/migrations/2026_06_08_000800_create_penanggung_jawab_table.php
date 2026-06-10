@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('penanggung_jawab', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->unique();
-            $table->integer('valuasi_transaksi');
+            $table->integer('valuasi_transaksi')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

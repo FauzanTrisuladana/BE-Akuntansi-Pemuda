@@ -1,0 +1,146 @@
+{
+  "v": 12,
+  "id": "penanggung-jawab-collection",
+  "name": "Penanggung Jawab - Penanggung Jawab Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "pj-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Penanggung Jawab",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar penanggung jawab dengan filter search",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "pj-show",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Penanggung Jawab Detail",
+      "method": "GET",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil detail penanggung jawab beserta transaksinya",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "pj-store",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"Penanggung Jawab Baru\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Create Penanggung Jawab",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Membuat penanggung jawab baru",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "pj-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama\": \"Penanggung Jawab Update\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update Penanggung Jawab",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Update penanggung jawab berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "pj-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete Penanggung Jawab",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus penanggung jawab berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/penanggung-jawab",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

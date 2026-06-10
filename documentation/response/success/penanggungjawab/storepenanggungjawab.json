@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "message": "Penanggung jawab berhasil dibuat",
+  "data": {
+    "id": 3,
+    "nama": "Penanggung Jawab Baru"
+  }
+}

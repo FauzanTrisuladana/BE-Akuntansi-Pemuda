@@ -30,4 +30,14 @@ class Akun extends Model
     {
         return $this->hasMany(RiilHistory::class, 'akun_id');
     }
+
+    public function mutasiDebit()
+    {
+        return $this->hasMany(MutasiRekening::class, 'akun_debit_id');
+    }
+
+    public function mutasiKredit()
+    {
+        return $this->hasMany(MutasiRekening::class, 'akun_kredit_id');
+    }
 }

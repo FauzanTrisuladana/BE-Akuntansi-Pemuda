@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "message": "Data penanggung jawab berhasil diambil",
+  "data": [
+    {
+      "id": 1,
+      "nama": "Bendahara Pemuda",
+      "valuasi_transaksi": 1000000
+    },
+    {
+      "id": 2,
+      "nama": "Ketua Pemuda",
+      "valuasi_transaksi": 500000
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "last_page": 1,
+    "per_page": 10,
+    "total": 2
+  }
+}

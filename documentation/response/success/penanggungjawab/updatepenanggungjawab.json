@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "message": "Penanggung jawab berhasil diperbarui",
+  "data": {
+    "id": 3,
+    "nama": "Penanggung Jawab Update",
+    "valuasi_transaksi": 0
+  }
+}
