@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "User berhasil diupdate",
+  "data": {
+    "id": 5,
+    "name": "User Baru",
+    "email": "userupdate@example.com",
+    "role": "bendahara",
+    "status": "Aktif",
+    "profile_image": null,
+    "has_password": false
+  }
+}

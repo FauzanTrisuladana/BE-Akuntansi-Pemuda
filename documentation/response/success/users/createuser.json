@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "message": "User berhasil dibuat",
+  "data": {
+    "id": 5,
+    "name": "User Baru",
+    "email": "userbaru@example.com",
+    "role": "biasa",
+    "status": "Aktif",
+    "has_password": false
+  }
+}

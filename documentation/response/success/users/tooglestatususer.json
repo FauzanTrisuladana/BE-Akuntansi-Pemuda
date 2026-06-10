@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "Status user berhasil diubah menjadi Tidak Aktif",
+  "data": {
+    "id": 5,
+    "name": "User Baru",
+    "email": "userupdate@example.com",
+    "role": "bendahara",
+    "status": "Tidak Aktif",
+    "profile_image": null,
+    "has_password": false
+  }
+}
