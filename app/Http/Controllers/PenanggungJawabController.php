@@ -32,7 +32,7 @@ class PenanggungJawabController extends Controller
 
     public function show(string $id): PenanggungJawabResource
     {
-        $pj = PenanggungJawab::with(['transaksi'])->findOrFail($id);
+        $pj = PenanggungJawab::with(['transaksi', 'transaksi.akun:id,nama_akun'])->findOrFail($id);
 
         return (new PenanggungJawabResource($pj))
             ->message('Data transaksi penanggung jawab berhasil diambil');
