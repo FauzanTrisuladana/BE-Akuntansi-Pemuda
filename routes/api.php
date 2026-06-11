@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AkunController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HistoryRiilController;
 use App\Http\Controllers\PenanggungJawabController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -71,5 +73,25 @@ Route::middleware('auth:sanctum')->group(function () {
          * Delete /api/penanggung-jawab/{id} -> delete penanggung
          */
         Route::apiResource('penanggung-jawab', PenanggungJawabController::class);
+
+        /**
+         * Routes untuk manajemen akun
+         * Get /api/akun -> get list akun
+         * Get /api/akun/{id} -> get detail akun beserta transaksinya
+         * Post /api/akun -> create akun baru
+         * Put /api/akun/{id} -> update akun dengan id tertentu
+         * Delete /api/akun/{id} -> delete akun
+         */
+        Route::apiResource('akun', AkunController::class);
+
+        /**
+         * Route untuk History Riil
+         * Get /api/history-riil -> get list transaksi riil
+         * Put /api/history-riil/{id}/verify -> verify transaksi riil dengan id tertentu
+         */
+        Route::prefix('history-riil')->controller(HistoryRiilController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::put('/{id}/verify', 'verify');
+        });
     });
 });

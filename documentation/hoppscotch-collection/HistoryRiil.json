@@ -1,0 +1,100 @@
+{
+  "v": 12,
+  "id": "history-riil-collection",
+  "name": "History Riil - History Riil Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "history-riil-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get History Riil",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "tanggal_mulai",
+          "value": "2026-01-01",
+          "active": true
+        },
+        {
+          "key": "tanggal_selesai",
+          "value": "2026-12-31",
+          "active": true
+        },
+        {
+          "key": "kas[]",
+          "value": "kas pemuda",
+          "active": false
+        },
+        {
+          "key": "kas[]",
+          "value": "17 an",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar history riil dengan filter (search, tanggal, kas) dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "history-riil-verify",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Verify History Riil",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1/verify",
+      "responses": {},
+      "testScript": "",
+      "description": "Verifikasi history riil berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/history-riil",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}
