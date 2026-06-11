@@ -1,0 +1,188 @@
+{
+  "status": "success",
+  "message": "Data akun berhasil diambil",
+  "data": {
+    "id": 1,
+    "nama_akun": "Kas Pemuda",
+    "kas": "kas pemuda",
+    "keterangan": null,
+    "transaksi": [
+      {
+        "id": 1,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 2,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 3,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 4,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 5,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 6,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 7,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 8,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 9,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 10,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 11,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 12,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 13,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 14,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      },
+      {
+        "id": 15,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-10T00:00:00.000000Z",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null
+      },
+      {
+        "id": 16,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-09T00:00:00.000000Z",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null
+      }
+    ]
+  }
+}

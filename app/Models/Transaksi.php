@@ -30,16 +30,16 @@ class Transaksi extends Model
 
     public function akun()
     {
-        return $this->belongsTo(Akun::class, 'akun_id');
+        return $this->belongsTo(Akun::class, 'akun_id')->withTrashed();
     }
 
     public function penginput()
     {
-        return $this->belongsTo(User::class, 'penginput_id');
+        return $this->belongsTo(User::class, 'penginput_id')->withTrashed();
     }
 
     public function penanggungJawab()
     {
-        return $this->belongsTo(PenanggungJawab::class, 'penanggung_jawab_id');
+        return $this->belongsTo(PenanggungJawab::class, 'penanggung_jawab_id')->withTrashed();
     }
 }

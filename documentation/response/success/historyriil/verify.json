@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "message": "History riil berhasil diverifikasi",
+  "data": {
+    "id": 2,
+    "date": "2026-06-09T00:00:00.000000Z",
+    "verified": true,
+    "riil": "500000.00"
+  }
+}

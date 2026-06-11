@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "message": "Akun berhasil dibuat",
+  "data": {
+    "id": 5,
+    "nama_akun": "Kas Besar Pemuda",
+    "kas": "kas pemuda",
+    "keterangan": "Kas utama pemuda"
+  }
+}

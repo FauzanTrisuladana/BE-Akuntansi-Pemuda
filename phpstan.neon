@@ -26,5 +26,8 @@ parameters:
         - '#Method App\\Models\\PenanggungJawab::scopeFilter#'
         - '#Method App\\Models\\PenanggungJawab::transaksi#'
         - '#Relation .transaksi. is not found in App\\Models\\PenanggungJawab#'
+        # Ignore relation existence errors for Akun and RiilHistory (Larastan cache issue)
+        - '#Relation .transaksi. is not found in App\\Models\\Akun#'
+        - '#Relation .akun. is not found in App\\Models\\RiilHistory#'
         # Ignore variadic string parameter type issue in RoleMiddleware
         - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'

@@ -1,0 +1,156 @@
+{
+  "v": 12,
+  "id": "akun-collection",
+  "name": "Akun - Akun Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "akun-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Akun",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "kas[]",
+          "value": "17 an",
+          "active": false
+        },
+        {
+          "key": "kas[]",
+          "value": "kas pemuda",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar akun dengan filter (search, kas) dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "akun-show",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Akun Detail",
+      "method": "GET",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil detail akun beserta transaksinya",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "akun-store",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama_akun\": \"Kas Besar Pemuda\",\n  \"kas\": \"kas pemuda\",\n  \"keterangan\": \"Kas utama pemuda\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Create Akun",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Membuat akun baru",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "akun-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"nama_akun\": \"Kas Besar Pemuda Updated\",\n  \"kas\": \"17 an\",\n  \"keterangan\": \"Keterangan updated\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update Akun",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Update akun berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "akun-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete Akun",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus akun berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/akun",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

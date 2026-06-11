@@ -15,7 +15,6 @@ class RiilHistoryResource extends ApiResource
     {
         return [
             'id' => $this->whenHas('id'),
-            'akun_id' => $this->whenHas('akun_id'),
             'date' => $this->whenHas('date'),
             'verified' => $this->whenHas('verified'),
             'riil' => $this->whenHas('riil'),

@@ -26,11 +26,11 @@ class MutasiRekening extends Model
 
     public function akunDebit()
     {
-        return $this->belongsTo(Akun::class, 'akun_debit_id');
+        return $this->belongsTo(Akun::class, 'akun_debit_id')->withTrashed();
     }
 
     public function akunKredit()
     {
-        return $this->belongsTo(Akun::class, 'akun_kredit_id');
+        return $this->belongsTo(Akun::class, 'akun_kredit_id')->withTrashed();
     }
 }
