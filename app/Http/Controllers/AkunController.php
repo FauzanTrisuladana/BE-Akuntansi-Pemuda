@@ -55,7 +55,7 @@ class AkunController extends Controller
      */
     public function show(string $id): AkunResource
     {
-        $akun = Akun::with(['transaksi'])->findOrFail($id);
+        $akun = Akun::with(['transaksi', 'mutasiDebit', 'mutasiKredit'])->findOrFail($id);
 
         return (new AkunResource($akun))
             ->message('Data akun berhasil diambil');

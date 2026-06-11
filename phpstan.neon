@@ -29,5 +29,10 @@ parameters:
         # Ignore relation existence errors for Akun and RiilHistory (Larastan cache issue)
         - '#Relation .transaksi. is not found in App\\Models\\Akun#'
         - '#Relation .akun. is not found in App\\Models\\RiilHistory#'
+        - '#Relation .mutasi_rekening. is not found in App\\Models\\Akun#'
+        - '#Method App\\Models\\RiilHistory::akun#'
+        - '#Relation .mutasiDebit. is not found in App\\Models\\Akun#'
+        - '#Relation .mutasiKredit. is not found in App\\Models\\Akun#'
+        - '#Property App\\Models\\Akun::\$riil_terakhir#'
         # Ignore variadic string parameter type issue in RoleMiddleware
         - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'

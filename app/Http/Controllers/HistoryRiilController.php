@@ -6,6 +6,7 @@ use App\Http\Requests\HistoryRiil\IndexHistoryRiilRequest;
 use App\Http\Resources\ApiResourceCollection;
 use App\Http\Resources\RiilHistoryResource;
 use App\Models\RiilHistory;
+use Illuminate\Support\Facades\DB;
 
 class HistoryRiilController extends Controller
 {
@@ -36,18 +37,24 @@ class HistoryRiilController extends Controller
      */
     public function verify(string $id): RiilHistoryResource
     {
-        $historyRiil = RiilHistory::findOrFail($id);
+        $historyRiil = DB::transaction(function () use ($id) {
+            $historyRiil = RiilHistory::findOrFail($id);
 
-        $historyRiil->verified = true;
-        $historyRiil->save();
+            $historyRiil->verified = true;
+            $historyRiil->save();
 
-        $historyRillBefore = RiilHistory::where('akun_id', $historyRiil->akun_id)
-            ->where('date', '<', $historyRiil->date)
-            ->update(['verified' => true]);
+            RiilHistory::where('akun_id', $historyRiil->akun_id)
+                ->where('date', '<', $historyRiil->date)
+                ->update(['verified' => true]);
 
-        $akun = $historyRiil->akun;
-        $akun->riil_terakhir = $historyRiil->id;
-        $akun->save();
+            $akun = $historyRiil->akun;
+            if ($akun) {
+                $akun->riil_terakhir = (int) $historyRiil->id;
+                $akun->save();
+            }
+
+            return $historyRiil;
+        });
 
         return (new RiilHistoryResource($historyRiil))
             ->message('History riil berhasil diverifikasi');

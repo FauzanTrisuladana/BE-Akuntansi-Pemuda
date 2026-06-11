@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property Akun|null $akun
+ */
 class RiilHistory extends Model
 {
     use SoftDeletes;
@@ -25,7 +29,10 @@ class RiilHistory extends Model
         'riil' => 'decimal:2',
     ];
 
-    public function akun()
+    /**
+     * @return BelongsTo<Akun, RiilHistory>
+     */
+    public function akun(): BelongsTo
     {
         return $this->belongsTo(Akun::class, 'akun_id')->withTrashed();
     }

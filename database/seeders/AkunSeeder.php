@@ -18,18 +18,23 @@ class AkunSeeder extends Seeder
         ]);
 
         Akun::create([
-            'nama_akun' => 'Kas 17 AN',
+            'nama_akun' => 'Kas AN',
             'kas' => '17 an',
         ]);
 
         Akun::create([
-            'nama_akun' => 'Kas Pemuda 2',
+            'nama_akun' => 'Bank BRI',
             'kas' => 'kas pemuda',
         ]);
 
         Akun::create([
-            'nama_akun' => 'Kas 17 AN 2',
-            'kas' => '17 an',
+            'nama_akun' => 'Dana BOS',
+            'kas' => 'kas pemuda',
+        ]);
+
+        Akun::create([
+            'nama_akun' => 'Bank BCA',
+            'kas' => 'kas pemuda',
         ]);
     }
 }
