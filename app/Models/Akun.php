@@ -17,10 +17,12 @@ class Akun extends Model
         'nama_akun',
         'kas',
         'keterangan',
+        'jumlah',
     ];
 
     protected $casts = [
         'kas' => 'string',
+        'jumlah' => 'decimal:2',
     ];
 
     public function riilHistory()

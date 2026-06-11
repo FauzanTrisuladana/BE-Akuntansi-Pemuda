@@ -45,6 +45,10 @@ class HistoryRiilController extends Controller
             ->where('date', '<', $historyRiil->date)
             ->update(['verified' => true]);
 
+        $akun = $historyRiil->akun;
+        $akun->riil_terakhir = $historyRiil->id;
+        $akun->save();
+
         return (new RiilHistoryResource($historyRiil))
             ->message('History riil berhasil diverifikasi');
     }

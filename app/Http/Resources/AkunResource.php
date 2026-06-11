@@ -17,6 +17,7 @@ class AkunResource extends ApiResource
             'id' => $this->whenHas('id'),
             'nama_akun' => $this->whenHas('nama_akun'),
             'kas' => $this->whenHas('kas'),
+            'jumlah' => $this->whenHas('jumlah'),
             'keterangan' => $this->whenHas('keterangan'),
 
             'riil_terakhir' => new RiilHistoryResource($this->whenLoaded('riilHistory')),
