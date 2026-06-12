@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property int|null $riil_terakhir
+ * @property string $nama_akun
+ * @property string $kas
+ * @property string|null $keterangan
+ * @property numeric|null $jumlah
+ */
 class Akun extends Model
 {
     use SoftDeletes;

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\HistoryRiil;
+namespace App\Http\Requests\MutasiRekening;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class IndexHistoryRiilRequest extends FormRequest
+class IndexMutasiRekeningRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -60,13 +60,18 @@ class IndexHistoryRiilRequest extends FormRequest
                 'after_or_equal:tanggal_mulai',
             ],
             'kas' => [
-                'sometimes',
+                'required',
                 'array',
             ],
             'kas.*' => [
-                'sometimes',
+                'required',
                 'string',
-                'in:kas pemuda,17 an',
+                'in:17 an,kas pemuda',
+            ],
+            'akun' => [
+                'nullable',
+                'integer',
+                'exists:akun,id',
             ],
         ];
     }

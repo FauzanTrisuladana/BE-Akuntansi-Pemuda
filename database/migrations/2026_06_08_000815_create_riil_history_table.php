@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('akun_id');
             $table->date('date')->index();
-            $table->boolean('verified')->index();
+            $table->boolean('verified')->default(false)->index();
             $table->decimal('riil', 15, 2);
             $table->timestamps();
             $table->softDeletes();

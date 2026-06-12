@@ -5,8 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 
 /**
+ * @property int $akun_id
+ * @property Carbon|string $date
+ * @property bool $verified
+ * @property numeric|null $riil
  * @property Akun|null $akun
  */
 class RiilHistory extends Model
@@ -25,7 +30,7 @@ class RiilHistory extends Model
     protected $casts = [
         'date' => 'date',
         'verified' => 'boolean',
-        'riil' => 'decimal:15,2',
+        'riil' => 'decimal:2',
     ];
 
     public function akun()

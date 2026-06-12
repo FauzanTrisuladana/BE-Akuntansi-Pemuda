@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Requests\HistoryRiil;
+namespace App\Http\Requests\MutasiRekening;
 
+use App\Models\MutasiRekening;
+use App\Models\RiilHistory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class IndexHistoryRiilRequest extends FormRequest
+class UpdateMutasiRekeningRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,40 +35,14 @@ class IndexHistoryRiilRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'search' => [
+            'jumlah' => [
+                'required',
+                'integer',
+                'min:1',
+            ],
+            'keterangan' => [
                 'nullable',
                 'string',
-                'max:255',
-            ],
-            'page' => [
-                'required',
-                'integer',
-                'min:1',
-            ],
-            'per_page' => [
-                'required',
-                'integer',
-                'min:1',
-                'max:100',
-            ],
-            'tanggal_mulai' => [
-                'required',
-                'date',
-                'before_or_equal:tanggal_selesai',
-            ],
-            'tanggal_selesai' => [
-                'required',
-                'date',
-                'after_or_equal:tanggal_mulai',
-            ],
-            'kas' => [
-                'sometimes',
-                'array',
-            ],
-            'kas.*' => [
-                'sometimes',
-                'string',
-                'in:kas pemuda,17 an',
             ],
         ];
     }
@@ -81,11 +57,23 @@ class IndexHistoryRiilRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $validator->after(function ($validator) {
-            // ex:
-            // if ($this->something_invalid) {
-            //     $validator->errors()->add('field', 'Custom error');
-            // }
+        $mutasi = MutasiRekening::findOrFail($this->route('mutasi_rekening'));
+        $historyRiil = RiilHistory::where('verified', true)
+            ->where(function ($q) use ($mutasi) {
+                $q->where('date', '>', $mutasi->date)
+                    ->orWhere(function ($q2) use ($mutasi) {
+                        $q2->where('date', $mutasi->date)
+                            ->where('akun_id', $mutasi->akun_debit_id);
+                    })
+                    ->orWhere(function ($q2) use ($mutasi) {
+                        $q2->where('date', $mutasi->date)
+                            ->where('akun_id', $mutasi->akun_kredit_id);
+                    });
+            })->exists();
+        $validator->after(function ($validator) use ($mutasi, $historyRiil) {
+            if ($historyRiil && $mutasi->jumlah != $this->input('jumlah')) {
+                $validator->errors()->add('jumlah', 'Jumlah mutasi rekening tidak bisa diupdate karena sudah ada history riil terkonfirmasi yang lebih baru');
+            }
         });
     }
 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HistoryRiilController;
+use App\Http\Controllers\MutasiRekeningController;
 use App\Http\Controllers\PenanggungJawabController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -95,5 +96,15 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('/', 'index');
             Route::put('/{id}/verify', 'verify');
         });
+
+        /**
+         * Route untuk manajemen mutasi rekening
+         * Get /api/mutasi-rekening -> get list mutasi rekening
+         * Post /api/mutasi-rekening -> create mutasi rekening baru
+         * Put /api/mutasi-rekening/{id} -> update mutasi rekening dengan id tertentu
+         * Delete /api/mutasi-rekening/{id} -> delete mutasi rekening
+         */
+        Route::apiResource('mutasi-rekening', MutasiRekeningController::class)
+            ->except(['show']);
     });
 });

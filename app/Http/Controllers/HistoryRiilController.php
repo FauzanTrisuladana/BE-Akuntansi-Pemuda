@@ -49,8 +49,7 @@ class HistoryRiilController extends Controller
 
             $akun = $historyRiil->akun;
             if ($akun) {
-                $akun->riil_terakhir = (int) $historyRiil->id;
-                $akun->save();
+                $akun->update(['riil_terakhir' => $historyRiil->id, 'jumlah' => $historyRiil->riil]);
             }
 
             return $historyRiil;

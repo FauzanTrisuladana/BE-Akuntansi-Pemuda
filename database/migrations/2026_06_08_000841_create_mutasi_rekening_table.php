@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('akun_kredit_id');
             $table->date('date')->index();
             $table->integer('jumlah');
-            $table->text('keterangan');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

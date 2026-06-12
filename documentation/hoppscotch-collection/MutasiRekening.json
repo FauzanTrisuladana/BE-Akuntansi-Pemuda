@@ -1,0 +1,149 @@
+{
+  "v": 12,
+  "id": "mutasi-rekening-collection",
+  "name": "Mutasi Rekening - Mutasi Rekening Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "mutasi-rekening-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Mutasi Rekening",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "tanggal_mulai",
+          "value": "2026-01-01",
+          "active": true
+        },
+        {
+          "key": "tanggal_selesai",
+          "value": "2026-12-31",
+          "active": true
+        },
+        {
+          "key": "kas[]",
+          "value": "17 an",
+          "active": true
+        },
+        {
+          "key": "kas[]",
+          "value": "kas pemuda",
+          "active": true
+        },
+        {
+          "key": "akun",
+          "value": "",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar mutasi rekening dengan filter (search, tanggal, kas, akun) dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "mutasi-rekening-store",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"date\": \"2026-06-12\",\n  \"kas\": \"kas pemuda\",\n  \"akun_debit_id\": 1,\n  \"akun_kredit_id\": 2,\n  \"jumlah\": 100000\n}",
+        "contentType": "application/json"
+      },
+      "name": "Create Mutasi Rekening",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Membuat mutasi rekening baru",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "mutasi-rekening-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": "{\n  \"jumlah\": 150000,\n  \"keterangan\": \"Keterangan mutasi\"\n}",
+        "contentType": "application/json"
+      },
+      "name": "Update Mutasi Rekening",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Update mutasi rekening berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "mutasi-rekening-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete Mutasi Rekening",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus mutasi rekening berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/mutasi-rekening",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

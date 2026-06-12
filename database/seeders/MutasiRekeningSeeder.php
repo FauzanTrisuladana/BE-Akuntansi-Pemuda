@@ -20,7 +20,7 @@ class MutasiRekeningSeeder extends Seeder
         $bankBca = Akun::where('nama_akun', 'Bank BCA')->first();
 
         // Pastikan semua akun yang diperlukan ada
-        if (!$kasPemuda || !$kasAn || !$bankBri || !$danaBos || !$bankBca) {
+        if (! $kasPemuda || ! $kasAn || ! $bankBri || ! $danaBos || ! $bankBca) {
             return;
         }
 
