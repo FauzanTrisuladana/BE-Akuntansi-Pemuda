@@ -40,6 +40,10 @@ class DropdownAkunRequest extends FormRequest
             ],
             'kas' => [
                 'required',
+                'array',
+            ],
+            'kas.*' => [
+                'required',
                 'string',
                 'in:17 an,kas pemuda',
             ],

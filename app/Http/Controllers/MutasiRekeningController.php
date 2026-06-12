@@ -224,7 +224,7 @@ class MutasiRekeningController extends Controller
     /**
      * Update riil history setelah tanggal tertentu dengan selisih.
      */
-    private function updateRiilSetelahnya(int $akunId, string $date, $selisih, string $tipe): void
+    private function updateRiilSetelahnya(int $akunId, string $date, int $selisih, string $tipe): void
     {
         $riilSetelahnya = RiilHistory::where('akun_id', $akunId)
             ->where('date', '>', $date)

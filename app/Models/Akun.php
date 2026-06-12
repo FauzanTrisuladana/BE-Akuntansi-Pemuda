@@ -78,14 +78,14 @@ class Akun extends Model
      * @param  Builder<Akun>  $query
      * @return Builder<Akun>
      */
-    public function scopeFilterDropdown($query, ?string $search = null, ?string $kas = null)
+    public function scopeFilterDropdown($query, ?string $search = null, ?array $kas = null)
     {
         if ($search) {
             $query->where('nama_akun', 'like', "%$search%");
         }
 
         if ($kas) {
-            $query->where('kas', $kas);
+            $query->whereIn('kas', $kas);
         }
 
         return $query;
