@@ -66,4 +66,21 @@ class Akun extends Model
 
         return $query;
     }
+
+    /**
+     * @param  Builder<Akun>  $query
+     * @return Builder<Akun>
+     */
+    public function scopeFilterDropdown($query, ?string $search = null, ?string $kas = null)
+    {
+        if ($search) {
+            $query->where('nama_akun', 'like', "%$search%");
+        }
+
+        if ($kas) {
+            $query->where('kas', $kas);
+        }
+
+        return $query;
+    }
 }

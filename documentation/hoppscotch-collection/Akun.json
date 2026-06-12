@@ -36,12 +36,12 @@
         {
           "key": "kas[]",
           "value": "17 an",
-          "active": false
+          "active": true
         },
         {
           "key": "kas[]",
           "value": "kas pemuda",
-          "active": false
+          "active": true
         }
       ],
       "headers": [],
@@ -71,6 +71,39 @@
       "responses": {},
       "testScript": "",
       "description": "Mengambil detail akun beserta transaksinya",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "akun-dropdown",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Akun Dropdown",
+      "method": "GET",
+      "params": [
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "kas",
+          "value": "kas pemuda",
+          "active": true
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/dropdown",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil list akun untuk dropdown (hanya id dan nama_akun)",
       "preRequestScript": "",
       "requestVariables": []
     },

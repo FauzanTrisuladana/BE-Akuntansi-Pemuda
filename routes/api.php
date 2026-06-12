@@ -78,10 +78,12 @@ Route::middleware('auth:sanctum')->group(function () {
          * Routes untuk manajemen akun
          * Get /api/akun -> get list akun
          * Get /api/akun/{id} -> get detail akun beserta transaksinya
+         * Get /api/akun/dropdown -> get list akun untuk dropdown (hanya id dan nama_akun)
          * Post /api/akun -> create akun baru
          * Put /api/akun/{id} -> update akun dengan id tertentu
          * Delete /api/akun/{id} -> delete akun
          */
+        Route::get('/akun/dropdown', [AkunController::class, 'dropdown']);
         Route::apiResource('akun', AkunController::class);
 
         /**

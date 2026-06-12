@@ -5,7 +5,7 @@ namespace App\Http\Requests\Akun;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class IndexAkunRequest extends FormRequest
+class DropdownAkunRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,27 +33,12 @@ class IndexAkunRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'page' => [
-                'required',
-                'integer',
-                'min:1',
-            ],
-            'per_page' => [
-                'required',
-                'integer',
-                'min:1',
-                'max:100',
-            ],
             'search' => [
                 'sometimes',
                 'string',
                 'max:255',
             ],
             'kas' => [
-                'required',
-                'array',
-            ],
-            'kas.*' => [
                 'required',
                 'string',
                 'in:17 an,kas pemuda',

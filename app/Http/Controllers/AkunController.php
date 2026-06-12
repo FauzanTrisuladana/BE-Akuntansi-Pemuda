@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Akun\DropdownAkunRequest;
 use App\Http\Requests\Akun\IndexAkunRequest;
 use App\Http\Requests\Akun\StoreAkunRequest;
 use App\Http\Requests\Akun\UpdateAkunRequest;
@@ -26,6 +27,24 @@ class AkunController extends Controller
         )
             ->orderBy('nama_akun')
             ->paginate($validated['per_page']);
+
+        return AkunResource::collection($akun)
+            ->message('Data akun berhasil diambil');
+    }
+
+    /**
+     * Dropdown akun untuk transaksi.
+     * Get /api/akun/dropdown
+     */
+    public function dropdown(DropdownAkunRequest $request): ApiResourceCollection
+    {
+        $validated = $request->validated();
+        $akun = Akun::filterDropdown(
+            search: $validated['search'] ?? null,
+            kas: $validated['kas'] ?? null,
+        )
+            ->orderBy('nama_akun')
+            ->get(['id', 'nama_akun']);
 
         return AkunResource::collection($akun)
             ->message('Data akun berhasil diambil');
