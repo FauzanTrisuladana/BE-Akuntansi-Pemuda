@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "message": "Mutasi rekening berhasil dibuat",
+  "data": {
+    "id": 10,
+    "akun_debit_id": 1,
+    "akun_kredit_id": 3,
+    "date": "2026-06-12T17:00:00.000000Z",
+    "jumlah": 100000,
+    "akun_debit": {
+      "id": 1,
+      "nama_akun": "Kas Pemuda",
+      "kas": "kas pemuda",
+      "jumlah": "100000.00",
+      "keterangan": null
+    },
+    "akun_kredit": {
+      "id": 3,
+      "nama_akun": "Bank BRI",
+      "kas": "kas pemuda",
+      "jumlah": "-100000.00",
+      "keterangan": null
+    }
+  }
+}

@@ -178,7 +178,44 @@ class MutasiRekeningController extends Controller
             abort(400, 'Mutasi rekening tidak bisa dihapus karena sudah ada history riil terkonfirmasi yang lebih baru');
         }
 
-        $mutasi->delete();
+        DB::transaction(function () use ($mutasi) {
+            // Update riil history akun debit - ambil dari riil history terakhir sebelum tanggal
+            $riilDebit = RiilHistory::where('akun_id', $mutasi->akun_debit_id)
+                ->where('date', '<=', $mutasi->date)
+                ->orderBy('date', 'desc')
+                ->orderBy('id', 'desc')
+                ->first();
+            $jumlahDebit = $riilDebit ? $riilDebit->riil : 0;
+            $jumlahDebit -= $mutasi->jumlah;
+            RiilHistory::updateOrCreate([
+                'akun_id' => $mutasi->akun_debit_id,
+                'date' => $mutasi->date,
+            ], [
+                'riil' => $jumlahDebit,
+            ]);
+
+            // Update riil history akun kredit - ambil dari riil history terakhir sebelum tanggal
+            $riilKredit = RiilHistory::where('akun_id', $mutasi->akun_kredit_id)
+                ->where('date', '<=', $mutasi->date)
+                ->orderBy('date', 'desc')
+                ->orderBy('id', 'desc')
+                ->first();
+            $jumlahKredit = $riilKredit ? $riilKredit->riil : 0;
+            $jumlahKredit += $mutasi->jumlah;
+            RiilHistory::updateOrCreate([
+                'akun_id' => $mutasi->akun_kredit_id,
+                'date' => $mutasi->date,
+            ], [
+                'riil' => $jumlahKredit,
+            ]);
+
+            // Update semua riil history setelah tanggal ini dengan nilai baru
+            $this->updateRiilSetelahnya($mutasi->akun_debit_id, $mutasi->date, -$mutasi->jumlah, 'debit');
+            $this->updateRiilSetelahnya($mutasi->akun_kredit_id, $mutasi->date, -$mutasi->jumlah, 'kredit');
+
+            $mutasi->delete();
+
+        });
 
         return (new ApiResource(null))
             ->message('Mutasi rekening berhasil dihapus');

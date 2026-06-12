@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "message": "Data akun berhasil diambil",
+  "data": [
+    {
+      "id": 5,
+      "nama_akun": "Bank BCA"
+    },
+    {
+      "id": 3,
+      "nama_akun": "Bank BRI"
+    },
+    {
+      "id": 4,
+      "nama_akun": "Dana BOS"
+    },
+    {
+      "id": 2,
+      "nama_akun": "Kas AN"
+    }
+  ]
+}
