@@ -24,7 +24,7 @@ class HistoryRiilController extends Controller
             tanggal_selesai: $validated['tanggal_selesai'] ?? null,
             kas: $validated['kas'] ?? null,
         )
-            ->orderBy('created_at', 'desc')
+            ->orderBy('date', 'desc')
             ->paginate($validated['per_page']);
 
         return RiilHistoryResource::collection($historyRiil)
