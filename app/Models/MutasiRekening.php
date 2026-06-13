@@ -72,9 +72,9 @@ class MutasiRekening extends Model
         if ($kas) {
             $query->where(function ($q) use ($kas) {
                 $q->whereHas('akunDebit', function ($q2) use ($kas) {
-                    $q2->whereIn('nama_akun', $kas);
+                    $q2->whereIn('kas', $kas);
                 })->orWhereHas('akunKredit', function ($q2) use ($kas) {
-                    $q2->whereIn('nama_akun', $kas);
+                    $q2->whereIn('kas', $kas);
                 });
             });
         }
@@ -82,9 +82,9 @@ class MutasiRekening extends Model
         if ($akun) {
             $query->where(function ($q) use ($akun) {
                 $q->whereHas('akunDebit', function ($q2) use ($akun) {
-                    $q2->where('id', $akun);
+                    $q2->where('nama_akun', $akun);
                 })->orWhereHas('akunKredit', function ($q2) use ($akun) {
-                    $q2->where('id', $akun);
+                    $q2->where('nama_akun', $akun);
                 });
             });
         }
