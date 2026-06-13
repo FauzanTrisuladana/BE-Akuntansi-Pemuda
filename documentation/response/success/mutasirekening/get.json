@@ -3,46 +3,46 @@
   "message": "Data mutasi rekening berhasil diambil",
   "data": [
     {
-      "id": 10,
-      "akun_debit_id": 1,
-      "akun_kredit_id": 3,
-      "date": "2026-06-12T17:00:00.000000Z",
-      "jumlah": 100000,
-      "keterangan": null,
+      "id": 7,
+      "akun_debit_id": 3,
+      "akun_kredit_id": 5,
+      "date": "2026-06-13",
+      "jumlah": 200000,
+      "keterangan": "Transfer antar bank untuk likuiditas",
       "akun_debit": {
-        "id": 1,
-        "nama_akun": "Kas Pemuda",
-        "kas": "kas pemuda",
-        "jumlah": "100000.00",
-        "keterangan": null
-      },
-      "akun_kredit": {
         "id": 3,
         "nama_akun": "Bank BRI",
         "kas": "kas pemuda",
-        "jumlah": "-100000.00",
+        "jumlah": "0.00",
+        "keterangan": null
+      },
+      "akun_kredit": {
+        "id": 5,
+        "nama_akun": "Bank BCA",
+        "kas": "kas pemuda",
+        "jumlah": "0.00",
         "keterangan": null
       }
     },
     {
-      "id": 8,
-      "akun_debit_id": 1,
-      "akun_kredit_id": 3,
-      "date": "2026-06-11T17:00:00.000000Z",
-      "jumlah": 100000,
-      "keterangan": null,
+      "id": 6,
+      "akun_debit_id": 2,
+      "akun_kredit_id": 5,
+      "date": "2026-06-12",
+      "jumlah": 75000,
+      "keterangan": "Transfer ke Bank BCA untuk keperluan administrasi",
       "akun_debit": {
-        "id": 1,
-        "nama_akun": "Kas Pemuda",
-        "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "id": 2,
+        "nama_akun": "Kas AN",
+        "kas": "17 an",
+        "jumlah": "0.00",
         "keterangan": null
       },
       "akun_kredit": {
-        "id": 3,
-        "nama_akun": "Bank BRI",
+        "id": 5,
+        "nama_akun": "Bank BCA",
         "kas": "kas pemuda",
-        "jumlah": "-100000.00",
+        "jumlah": "0.00",
         "keterangan": null
       }
     },
@@ -50,14 +50,14 @@
       "id": 5,
       "akun_debit_id": 1,
       "akun_kredit_id": 4,
-      "date": "2026-06-09T17:00:00.000000Z",
+      "date": "2026-06-11",
       "jumlah": 150000,
       "keterangan": "Penggunaan Dana BOS untuk rapat koordinasi",
       "akun_debit": {
         "id": 1,
         "nama_akun": "Kas Pemuda",
         "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "jumlah": "500000.00",
         "keterangan": null
       },
       "akun_kredit": {
@@ -72,7 +72,7 @@
       "id": 4,
       "akun_debit_id": 4,
       "akun_kredit_id": 1,
-      "date": "2026-06-07T17:00:00.000000Z",
+      "date": "2026-06-09",
       "jumlah": 500000,
       "keterangan": "Penerimaan Dana BOS untuk kegiatan pemuda",
       "akun_debit": {
@@ -86,7 +86,7 @@
         "id": 1,
         "nama_akun": "Kas Pemuda",
         "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "jumlah": "500000.00",
         "keterangan": null
       }
     },
@@ -94,21 +94,21 @@
       "id": 3,
       "akun_debit_id": 1,
       "akun_kredit_id": 3,
-      "date": "2026-06-05T17:00:00.000000Z",
+      "date": "2026-06-07",
       "jumlah": 250000,
       "keterangan": "Setoran ke Bank BRI untuk operasional",
       "akun_debit": {
         "id": 1,
         "nama_akun": "Kas Pemuda",
         "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "jumlah": "500000.00",
         "keterangan": null
       },
       "akun_kredit": {
         "id": 3,
         "nama_akun": "Bank BRI",
         "kas": "kas pemuda",
-        "jumlah": "-100000.00",
+        "jumlah": "0.00",
         "keterangan": null
       }
     },
@@ -116,7 +116,7 @@
       "id": 2,
       "akun_debit_id": 2,
       "akun_kredit_id": 1,
-      "date": "2026-06-03T17:00:00.000000Z",
+      "date": "2026-06-05",
       "jumlah": 50000,
       "keterangan": "Pengembalian dana dari Kas AN ke Kas Pemuda",
       "akun_debit": {
@@ -130,7 +130,7 @@
         "id": 1,
         "nama_akun": "Kas Pemuda",
         "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "jumlah": "500000.00",
         "keterangan": null
       }
     },
@@ -138,14 +138,14 @@
       "id": 1,
       "akun_debit_id": 1,
       "akun_kredit_id": 2,
-      "date": "2026-06-01T17:00:00.000000Z",
+      "date": "2026-06-03",
       "jumlah": 100000,
       "keterangan": "Mutasi dari Kas Pemuda ke Kas AN",
       "akun_debit": {
         "id": 1,
         "nama_akun": "Kas Pemuda",
         "kas": "kas pemuda",
-        "jumlah": "100000.00",
+        "jumlah": "500000.00",
         "keterangan": null
       },
       "akun_kredit": {

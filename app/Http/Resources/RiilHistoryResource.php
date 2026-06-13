@@ -15,7 +15,7 @@ class RiilHistoryResource extends ApiResource
     {
         return [
             'id' => $this->whenHas('id'),
-            'date' => $this->whenHas('date'),
+            'date' => $this->date ? $this->date->format('Y-m-d') : null,
             'verified' => $this->whenHas('verified'),
             'riil' => $this->whenHas('riil'),
 

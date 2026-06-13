@@ -17,7 +17,7 @@ class MutasiRekeningResource extends ApiResource
             'id' => $this->whenHas('id'),
             'akun_debit_id' => $this->whenHas('akun_debit_id'),
             'akun_kredit_id' => $this->whenHas('akun_kredit_id'),
-            'date' => $this->whenHas('date'),
+            'date' => $this->date ? $this->date->format('Y-m-d') : null,
             'jumlah' => $this->whenHas('jumlah'),
             'keterangan' => $this->whenHas('keterangan'),
 

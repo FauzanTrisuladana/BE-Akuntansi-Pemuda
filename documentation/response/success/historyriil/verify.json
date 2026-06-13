@@ -3,8 +3,15 @@
   "message": "History riil berhasil diverifikasi",
   "data": {
     "id": 2,
-    "date": "2026-06-09T00:00:00.000000Z",
+    "date": "2026-06-12",
     "verified": true,
-    "riil": "500000.00"
+    "riil": "500000.00",
+    "akun": {
+      "id": 1,
+      "nama_akun": "Kas Pemuda",
+      "kas": "kas pemuda",
+      "jumlah": "500000.00",
+      "keterangan": null
+    }
   }
 }
