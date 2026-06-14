@@ -23,6 +23,7 @@ class TransaksiResource extends ApiResource
             'jenis_transaksi' => $this->whenHas('jenis_transaksi'),
             'jumlah' => $this->whenHas('jumlah'),
             'bukti' => $this->whenHas('bukti'),
+            'bukti_public_id' => $this->whenHas('bukti_public_id'),
 
             'akun' => new AkunResource($this->whenLoaded('akun')),
             'penginput' => new UserResource($this->whenLoaded('penginput')),

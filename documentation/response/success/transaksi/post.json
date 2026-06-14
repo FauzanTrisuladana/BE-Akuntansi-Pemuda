@@ -1,0 +1,37 @@
+{
+  "status": "success",
+  "message": "Transaksi berhasil dibuat",
+  "data": {
+    "id": 82,
+    "akun_id": "1",
+    "penginput_id": 2,
+    "penanggung_jawab_id": "1",
+    "deskripsi": "Transaksi pemasukan kas",
+    "date": "2026-06-13T17:00:00.000000Z",
+    "jenis_transaksi": "pemasukan",
+    "jumlah": 100000,
+    "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781426935/bukti_transaksi/mqvejaxt37z3a1jkbywx.jpg",
+    "bukti_public_id": "bukti_transaksi/mqvejaxt37z3a1jkbywx",
+    "akun": {
+      "id": 1,
+      "nama_akun": "Kas Pemuda",
+      "kas": "kas pemuda",
+      "jumlah": "0.00",
+      "keterangan": null
+    },
+    "penginput": {
+      "id": 2,
+      "name": "Fauzan Trisuladana",
+      "email": "fauzantrisuladana@gmail.com",
+      "role": "bendahara",
+      "status": "Aktif",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+      "has_password": true
+    },
+    "penanggung_jawab": {
+      "id": 1,
+      "nama": "Bendahara Pemuda",
+      "valuasi_transaksi": 1000000
+    }
+  }
+}

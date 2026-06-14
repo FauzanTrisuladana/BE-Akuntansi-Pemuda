@@ -1,0 +1,231 @@
+{
+  "v": 12,
+  "id": "transaksi-collection",
+  "name": "Transaksi - Transaksi Management",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "transaksi-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Transaksi",
+      "method": "GET",
+      "params": [
+        {
+          "key": "page",
+          "value": "1",
+          "active": true
+        },
+        {
+          "key": "per_page",
+          "value": "10",
+          "active": true
+        },
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "tanggal_mulai",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "tanggal_selesai",
+          "value": "",
+          "active": false
+        },
+        {
+          "key": "jenis_transaksi[]",
+          "value": "pemasukan",
+          "active": true
+        },
+        {
+          "key": "jenis_transaksi[]",
+          "value": "pengeluaran",
+          "active": true
+        },
+        {
+          "key": "kas[]",
+          "value": "17 an",
+          "active": true
+        },
+        {
+          "key": "kas[]",
+          "value": "kas pemuda",
+          "active": true
+        },
+        {
+          "key": "akun",
+          "value": "",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar transaksi dengan filter (search, tanggal, jenis, kas, akun) dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "transaksi-store",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": [
+          {
+            "key": "deskripsi",
+            "value": "Transaksi pemasukan kas",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "date",
+            "value": "2026-06-14",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "jenis_transaksi",
+            "value": "pemasukan",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "akun_id",
+            "value": "1",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "penanggung_jawab_id",
+            "value": "1",
+            "active": false,
+            "isFile": false
+          },
+          {
+            "key": "jumlah",
+            "value": "100000",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "bukti",
+            "value": [
+              {}
+            ],
+            "active": false,
+            "isFile": true
+          }
+        ],
+        "contentType": "multipart/form-data"
+      },
+      "name": "Create Transaksi",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Membuat transaksi baru (bukti optional via form-data)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "transaksi-update",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": [
+          {
+            "key": "deskripsi",
+            "value": "Transaksi pemasukan kas updated",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "penanggung_jawab_id",
+            "value": "2",
+            "active": false,
+            "isFile": false
+          },
+          {
+            "key": "jumlah",
+            "value": "150000",
+            "active": true,
+            "isFile": false
+          },
+          {
+            "key": "bukti",
+            "value": [
+              {}
+            ],
+            "active": false,
+            "isFile": true
+          }
+        ],
+        "contentType": "multipart/form-data"
+      },
+      "name": "Update Transaksi",
+      "method": "PUT",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Update transaksi berdasarkan ID (bukti optional via form-data)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
+      "id": "transaksi-delete",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Delete Transaksi",
+      "method": "DELETE",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/1",
+      "responses": {},
+      "testScript": "",
+      "description": "Menghapus transaksi berdasarkan ID",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/transaksi",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

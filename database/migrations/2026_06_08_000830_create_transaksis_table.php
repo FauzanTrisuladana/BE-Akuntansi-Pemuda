@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('akun_id');
             $table->unsignedBigInteger('penginput_id');
-            $table->unsignedBigInteger('penanggung_jawab_id');
+            $table->unsignedBigInteger('penanggung_jawab_id')->nullable();
             $table->string('deskripsi');
             $table->date('date')->index();
             $table->enum('jenis_transaksi', ['pemasukan', 'pengeluaran'])->index();

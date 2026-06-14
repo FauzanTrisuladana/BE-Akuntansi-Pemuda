@@ -1,0 +1,39 @@
+{
+  "status": "success",
+  "message": "Transaksi berhasil diperbarui",
+  "data": {
+    "id": 82,
+    "akun_id": 1,
+    "penginput_id": 2,
+    "penanggung_jawab_id": "2",
+    "deskripsi": "Transaksi pemasukan kas updated",
+    "date": "2026-06-13T17:00:00.000000Z",
+    "jenis_transaksi": "pemasukan",
+    "jumlah": 150000,
+    "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781427007/bukti_transaksi/xsh7nimslvkwmtx82ast.jpg",
+    "bukti_public_id": "bukti_transaksi/xsh7nimslvkwmtx82ast",
+    "akun": {
+      "id": 1,
+      "nama_akun": "Kas Pemuda",
+      "kas": "kas pemuda",
+      "jumlah": "0.00",
+      "keterangan": null
+    },
+    "penginput": {
+      "id": 2,
+      "name": "Fauzan Trisuladana",
+      "email": "fauzantrisuladana@gmail.com",
+      "role": "bendahara",
+      "status": "Aktif",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+      "has_password": true
+    },
+    "penanggung_jawab": {
+      "id": 2,
+      "nama": "Ketua Pemuda",
+      "valuasi_transaksi": 500000
+    }
+  }
+}
+
+// untuk update pakai enpoint post tapi di form-data nya kasih _method = PUT, karena di backendnya pakai method PUT untuk update, kalau langsung pakai method PUT di postman atau hoppscotch itu gak bisa karena ada file upload nya, jadi harus pakai method POST terus kasih _method = PUT di form-data nya, nanti di backendnya akan otomatis di handle sebagai request PUT kalau kamu ai coba dulu pakai put di ge tapi kalau gabisa nanti aku bilang dan jadikan seperti yang di hoppscotch yang aku buat itu, karena di backendnya sudah aku handle untuk menerima request POST dengan _method = PUT untuk update, jadi nanti tinggal sesuaikan aja di frontendnya nanti kalau mau update transaksi tinggal pakai method POST terus kasih _method = PUT di form-data nya, nanti di backendnya akan otomatis di handle sebagai request PUT untuk update transaksi nya,

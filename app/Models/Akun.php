@@ -76,6 +76,7 @@ class Akun extends Model
 
     /**
      * @param  Builder<Akun>  $query
+     * @param  array<string>|null  $kas
      * @return Builder<Akun>
      */
     public function scopeFilterDropdown($query, ?string $search = null, ?array $kas = null)

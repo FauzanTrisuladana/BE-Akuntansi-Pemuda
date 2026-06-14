@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Requests\MutasiRekening;
+namespace App\Http\Requests\Transaksi;
 
-use App\Models\MutasiRekening;
 use App\Models\RiilHistory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateMutasiRekeningRequest extends FormRequest
+class StoreTransaksiRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +23,9 @@ class UpdateMutasiRekeningRequest extends FormRequest
      */
     protected function prepareForValidation(): void
     {
-        //
+        $this->merge([
+            'penginput_id' => $this->user()->id,
+        ]);
     }
 
     /**
@@ -35,14 +36,44 @@ class UpdateMutasiRekeningRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'jumlah' => [
-                'required',
-                'integer',
-                'min:1',
-            ],
-            'keterangan' => [
+            'deskripsi' => [
                 'nullable',
                 'string',
+                'max:255',
+            ],
+            'date' => [
+                'required',
+                'date',
+            ],
+            'jenis_transaksi' => [
+                'required',
+                'in:pemasukan,pengeluaran',
+            ],
+            'akun_id' => [
+                'required',
+                'integer',
+                'exists:akun,id',
+            ],
+            'penanggung_jawab_id' => [
+                'nullable',
+                'integer',
+                'exists:penanggung_jawab,id',
+            ],
+            'jumlah' => [
+                'required',
+                'numeric',
+                'min:0.01',
+            ],
+            'bukti' => [
+                'nullable',
+                'file',
+                'mimes:jpg,jpeg,png,pdf',
+                'max:5120', // 5MB
+            ],
+            'penginput_id' => [
+                'required',
+                'integer',
+                'exists:users,id',
             ],
         ];
     }
@@ -57,22 +88,13 @@ class UpdateMutasiRekeningRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $mutasi = MutasiRekening::findOrFail($this->route('mutasi_rekening'));
         $historyRiil = RiilHistory::where('verified', true)
-            ->where(function ($q) use ($mutasi) {
-                $q->where('date', '>', $mutasi->date)
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_debit_id);
-                    })
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_kredit_id);
-                    });
-            })->exists();
-        $validator->after(function ($validator) use ($mutasi, $historyRiil) {
-            if ($historyRiil && $mutasi->jumlah != $this->input('jumlah')) {
-                $validator->errors()->add('jumlah', 'Jumlah mutasi rekening ini tidak dapat diubah karena sudah ada history riil yang diverifikasi setelahnya.');
+            ->where('akun_id', $this->input('akun_id'))
+            ->where('date', '>=', $this->input('date'))
+            ->exists();
+        $validator->after(function ($validator) use ($historyRiil) {
+            if ($historyRiil) {
+                $validator->errors()->add('date', 'Tidak dapat membuat transaksi dengan tanggal sebelum riil history terakhir yang sudah diverifikasi');
             }
         });
     }
