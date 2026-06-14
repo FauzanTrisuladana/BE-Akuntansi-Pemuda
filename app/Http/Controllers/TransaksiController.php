@@ -34,10 +34,19 @@ class TransaksiController extends Controller
             ->orderBy('date', 'desc')
             ->paginate($validated['per_page']);
 
-        $summary = [
-            'total_pemasukan' => $transaksi->where('jenis_transaksi', 'pemasukan')->sum('jumlah'),
-            'total_pengeluaran' => $transaksi->where('jenis_transaksi', 'pengeluaran')->sum('jumlah'),
-        ];
+        $summary = Transaksi::filter(
+            search: $validated['search'] ?? null,
+            tanggal_mulai: $validated['tanggal_mulai'] ?? null,
+            tanggal_selesai: $validated['tanggal_selesai'] ?? null,
+            jenis_transaksi: $validated['jenis_transaksi'] ?? null,
+            kas: $validated['kas'] ?? null,
+            akun: $validated['akun'] ?? null,
+        )
+            ->selectRaw('
+                SUM(CASE WHEN jenis_transaksi = "pemasukan" THEN jumlah ELSE 0 END) as total_pemasukan,
+                SUM(CASE WHEN jenis_transaksi = "pengeluaran" THEN jumlah ELSE 0 END) as total_pengeluaran
+            ')
+            ->first();
 
         return TransaksiResource::collection($transaksi)
             ->message('Data transaksi berhasil diambil')
