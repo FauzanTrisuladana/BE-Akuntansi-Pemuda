@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PJ\DropdownPJRequest;
 use App\Http\Requests\PJ\IndexPJRequest;
 use App\Http\Requests\PJ\StorePJRequest;
 use App\Http\Requests\PJ\UpdatePJRequest;
@@ -30,12 +31,33 @@ class PenanggungJawabController extends Controller
             ->message('Data penanggung jawab berhasil diambil');
     }
 
+    /**
+     * Display the specified resource.
+     * Get /api/penanggung-jawab/{id}
+     */
     public function show(string $id): PenanggungJawabResource
     {
         $pj = PenanggungJawab::with(['transaksi', 'transaksi.akun:id,nama_akun'])->findOrFail($id);
 
         return (new PenanggungJawabResource($pj))
             ->message('Data transaksi penanggung jawab berhasil diambil');
+    }
+
+    /**
+     * Get list penanggung jawab untuk dropdown (hanya id dan nama).
+     * Get /api/penanggung-jawab/dropdown
+     */
+    public function dropdown(DropdownPJRequest $request): ApiResourceCollection
+    {
+        $validated = $request->validated();
+
+        $pj = PenanggungJawab::filter(
+            search: $validated['search'] ?? null,
+        )
+            ->orderBy('nama')->get(['id', 'nama']);
+
+        return PenanggungJawabResource::collection($pj)
+            ->message('Data penanggung jawab untuk dropdown berhasil diambil');
     }
 
     /**

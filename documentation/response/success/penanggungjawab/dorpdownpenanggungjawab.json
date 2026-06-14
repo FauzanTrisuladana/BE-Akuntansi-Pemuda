@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "message": "Data penanggung jawab untuk dropdown berhasil diambil",
+  "data": [
+    {
+      "id": 1,
+      "nama": "Bendahara Pemuda"
+    },
+    {
+      "id": 2,
+      "nama": "Ketua Pemuda"
+    }
+  ]
+}

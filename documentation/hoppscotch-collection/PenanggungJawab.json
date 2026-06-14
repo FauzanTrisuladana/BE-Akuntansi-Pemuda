@@ -66,6 +66,34 @@
     },
     {
       "v": "17",
+      "id": "pj-dropdown",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Penanggung Jawab Dropdown",
+      "method": "GET",
+      "params": [
+        {
+          "key": "search",
+          "value": "",
+          "active": false
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/dropdown",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil list penanggung jawab untuk dropdown (hanya id dan nama)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
       "id": "pj-store",
       "auth": {
         "authType": "inherit",

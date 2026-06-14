@@ -70,10 +70,12 @@ Route::middleware('auth:sanctum')->group(function () {
          * Routes untuk manajemen penanggung jawab
          * Get /api/penanggung-jawab -> get list penanggung jawab
          * Get /api/penanggung-jawab/{id} -> get detail transaksi penanggung jawab dengan id tertentu
+         * Get /api/penanggung-jawab/dropdown -> get list penanggung jawab untuk dropdown (hanya id dan nama)
          * Post /api/penanggung-jawab -> create penanggung jawab baru
          * Put /api/penanggung-jawab/{id} -> update penanggung jawab dengan id tertentu
          * Delete /api/penanggung-jawab/{id} -> delete penanggung
          */
+        Route::get('/penanggung-jawab/dropdown', [PenanggungJawabController::class, 'dropdown']);
         Route::apiResource('penanggung-jawab', PenanggungJawabController::class);
 
         /**
