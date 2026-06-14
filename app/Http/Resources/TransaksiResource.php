@@ -19,7 +19,7 @@ class TransaksiResource extends ApiResource
             'penginput_id' => $this->whenHas('penginput_id'),
             'penanggung_jawab_id' => $this->whenHas('penanggung_jawab_id'),
             'deskripsi' => $this->whenHas('deskripsi'),
-            'date' => $this->whenHas('date'),
+            'date' => $this->date ? $this->date->format('Y-m-d') : null,
             'jenis_transaksi' => $this->whenHas('jenis_transaksi'),
             'jumlah' => $this->whenHas('jumlah'),
             'bukti' => $this->whenHas('bukti'),
