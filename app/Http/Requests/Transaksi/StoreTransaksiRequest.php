@@ -65,9 +65,9 @@ class StoreTransaksiRequest extends FormRequest
                 'min:0.01',
             ],
             'bukti' => [
+                'sometimes',
                 'nullable',
-                'file',
-                'mimes:jpg,jpeg,png,pdf',
+                'image',
                 'max:5120', // 5MB
             ],
             'penginput_id' => [
