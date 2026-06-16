@@ -3,6 +3,7 @@
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HistoryRiilController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MutasiRekeningController;
 use App\Http\Controllers\PenanggungJawabController;
 use App\Http\Controllers\ProfileController;
@@ -47,6 +48,12 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('/update-password', 'updatePassword');
         Route::delete('/delete', 'delete');
     });
+
+    /**
+     * Route untuk laporan
+     * Get /api/laporan -> get laporan berdasarkan filter yang diberikan
+     */
+    Route::get('/laporan', [LaporanController::class, 'index']);
 
     /**
      * Routes untuk role bendahara

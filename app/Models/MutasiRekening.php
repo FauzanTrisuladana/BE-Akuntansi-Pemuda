@@ -49,7 +49,7 @@ class MutasiRekening extends Model
      * @param  array<string>  $kas
      * @return Builder<MutasiRekening>
      */
-    public function scopeFilter($query, ?string $search = null, ?string $tanggal_mulai = null, ?string $tanggal_selesai = null, ?array $kas = null, ?string $akun = null)
+    public function scopeFilter($query, ?string $search = null, ?string $tanggal_mulai = null, ?string $tanggal_selesai = null, ?array $kas = null, ?int $akun = null)
     {
         if ($search) {
             $query->where(function ($q) use ($search) {
@@ -82,9 +82,46 @@ class MutasiRekening extends Model
         if ($akun) {
             $query->where(function ($q) use ($akun) {
                 $q->whereHas('akunDebit', function ($q2) use ($akun) {
-                    $q2->where('nama_akun', $akun);
+                    $q2->where('id', $akun);
                 })->orWhereHas('akunKredit', function ($q2) use ($akun) {
-                    $q2->where('nama_akun', $akun);
+                    $q2->where('id', $akun);
+                });
+            });
+        }
+
+        return $query;
+    }
+
+    /**
+     * @param  Builder<MutasiRekening>  $query
+     * @return Builder<MutasiRekening>
+     */
+    public function scopeLaporanFilter($query, ?string $tanggal_mulai = null, ?string $tanggal_selesai = null, ?string $kas = null, ?int $akun = null)
+    {
+        if ($tanggal_mulai) {
+            $query->whereDate('date', '>=', $tanggal_mulai);
+        }
+
+        if ($tanggal_selesai) {
+            $query->whereDate('date', '<=', $tanggal_selesai);
+        }
+
+        if ($kas) {
+            $query->where(function ($q) use ($kas) {
+                $q->whereHas('akunDebit', function ($q2) use ($kas) {
+                    $q2->where('kas', $kas);
+                })->orWhereHas('akunKredit', function ($q2) use ($kas) {
+                    $q2->where('kas', $kas);
+                });
+            });
+        }
+
+        if ($akun) {
+            $query->where(function ($q) use ($akun) {
+                $q->whereHas('akunDebit', function ($q2) use ($akun) {
+                    $q2->where('id', $akun);
+                })->orWhereHas('akunKredit', function ($q2) use ($akun) {
+                    $q2->where('id', $akun);
                 });
             });
         }

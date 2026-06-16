@@ -103,4 +103,37 @@ class Transaksi extends Model
 
         return $query;
     }
+
+    /**
+     * @param  Builder<Transaksi>  $query
+     * @param  array<string>|null  $jenis_transaksi
+     * @return Builder<Transaksi>
+     */
+    public function scopeLaporanFilter($query, ?string $tanggal_mulai = null, ?string $tanggal_selesai = null, ?array $jenis_transaksi = null, ?string $kas = null, ?int $akun = null)
+    {
+
+        if ($tanggal_mulai) {
+            $query->where('date', '>=', $tanggal_mulai);
+        }
+
+        if ($tanggal_selesai) {
+            $query->where('date', '<=', $tanggal_selesai);
+        }
+
+        if ($jenis_transaksi) {
+            $query->whereIn('jenis_transaksi', $jenis_transaksi);
+        }
+
+        if ($kas) {
+            $query->whereHas('akun', function ($q) use ($kas) {
+                $q->where('kas', $kas);
+            });
+        }
+
+        if ($akun) {
+            $query->where('akun_id', $akun);
+        }
+
+        return $query;
+    }
 }

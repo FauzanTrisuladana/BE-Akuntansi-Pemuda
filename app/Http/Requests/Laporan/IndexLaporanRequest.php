@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Transaksi;
+namespace App\Http\Requests\Laporan;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class IndexTransaksiRequest extends FormRequest
+class IndexLaporanRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,22 +33,6 @@ class IndexTransaksiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'search' => [
-                'nullable',
-                'string',
-                'max:255',
-            ],
-            'page' => [
-                'required',
-                'integer',
-                'min:1',
-            ],
-            'per_page' => [
-                'required',
-                'integer',
-                'min:1',
-                'max:100',
-            ],
             'tanggal_mulai' => [
                 'required',
                 'date',
@@ -69,10 +53,6 @@ class IndexTransaksiRequest extends FormRequest
                 'in:pemasukan,pengeluaran',
             ],
             'kas' => [
-                'required',
-                'array',
-            ],
-            'kas.*' => [
                 'required',
                 'string',
                 'in:17 an,kas pemuda',

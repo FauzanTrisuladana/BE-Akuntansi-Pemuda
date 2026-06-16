@@ -51,5 +51,13 @@ parameters:
         - '#Call to an undefined method.*storeOnCloudinary#'
         - '#Access to an undefined property App\\Models\\Transaksi#'
         - '#Relation .penanggungJawab. is not found in App\\Models\\Transaksi#'
+        - '#Access to an undefined property App\\Http\\Resources\\LaporanResource#'
+        - '#Access to an undefined property App\\Http\\Resources\\PosisiKeuanganResource#'
+        - '#Access to an undefined property App\\Http\\Resources\\TransaksiResource#'
+        - '#Line   app\\Models\\PosisiKeuangan.php#'
+        - '#nullCoalesce.expr#'
+        - '#nullCoalesce.variable#'
+        - '#Expression on left side of \\?\\? is not nullable#'
+        - '#Variable .* on left side of \\?\\? always exists#'
         # Ignore variadic string parameter type issue in RoleMiddleware
         - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'

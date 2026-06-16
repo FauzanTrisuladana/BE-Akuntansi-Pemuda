@@ -1,0 +1,2423 @@
+{
+  "status": "success",
+  "message": "Data laporan berhasil diambil",
+  "data": {
+    "transaksi": [
+      {
+        "id": 83,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "halo le",
+        "date": "2026-06-15",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 100000,
+        "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781503565/bukti_transaksi/ozhdhl4vgupxof5soi5r.jpg",
+        "bukti_public_id": "bukti_transaksi/ozhdhl4vgupxof5soi5r",
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 84,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Transaksi pemasukan kas",
+        "date": "2026-06-15",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 100000,
+        "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781481045/bukti_transaksi/hj47mr3yzbrqzopkxajz.jpg",
+        "bukti_public_id": "bukti_transaksi/hj47mr3yzbrqzopkxajz",
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 85,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Transaksi pemasukan kas",
+        "date": "2026-06-15",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 100000,
+        "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781503541/bukti_transaksi/gw5no9pyqgmphgdyrvni.jpg",
+        "bukti_public_id": "bukti_transaksi/gw5no9pyqgmphgdyrvni",
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 1,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 73,
+        "akun_id": 5,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 57,
+        "akun_id": 4,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 41,
+        "akun_id": 3,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 7,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 47,
+        "akun_id": 3,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 79,
+        "akun_id": 5,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 63,
+        "akun_id": 4,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 13,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 69,
+        "akun_id": 5,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 53,
+        "akun_id": 4,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 37,
+        "akun_id": 3,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 3,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 43,
+        "akun_id": 3,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 75,
+        "akun_id": 5,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 59,
+        "akun_id": 4,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 9,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 65,
+        "akun_id": 5,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 49,
+        "akun_id": 4,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 33,
+        "akun_id": 3,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 71,
+        "akun_id": 5,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 55,
+        "akun_id": 4,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 39,
+        "akun_id": 3,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 5,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 45,
+        "akun_id": 3,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 81,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Transaksi pemasukan kas",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 100000,
+        "bukti": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1781426849/bukti_transaksi/z2sgonla5jlsleoapmyd.jpg",
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 77,
+        "akun_id": 5,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 61,
+        "akun_id": 4,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 11,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Kas Pemuda",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 67,
+        "akun_id": 5,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BCA",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 51,
+        "akun_id": 4,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Dana BOS",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 35,
+        "akun_id": 3,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pemasukan Dana Bank BRI",
+        "date": "2026-06-14",
+        "jenis_transaksi": "pemasukan",
+        "jumlah": 1000000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 46,
+        "akun_id": 3,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 78,
+        "akun_id": 5,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 62,
+        "akun_id": 4,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 12,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 68,
+        "akun_id": 5,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 52,
+        "akun_id": 4,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 36,
+        "akun_id": 3,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 2,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 74,
+        "akun_id": 5,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 58,
+        "akun_id": 4,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 42,
+        "akun_id": 3,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 8,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 64,
+        "akun_id": 4,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 48,
+        "akun_id": 3,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 80,
+        "akun_id": 5,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 14,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 70,
+        "akun_id": 5,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 54,
+        "akun_id": 4,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 38,
+        "akun_id": 3,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 4,
+        "akun_id": 1,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 44,
+        "akun_id": 3,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 16,
+        "akun_id": 1,
+        "penginput_id": 4,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 4,
+          "name": "User Tidak Aktif",
+          "email": "inactive@example.com",
+          "role": "bendahara",
+          "status": "Tidak Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 76,
+        "akun_id": 5,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 60,
+        "akun_id": 4,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 10,
+        "akun_id": 1,
+        "penginput_id": 3,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 3,
+          "name": "User Pending",
+          "email": "pending@example.com",
+          "role": "biasa",
+          "status": "Pending",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 66,
+        "akun_id": 5,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 50,
+        "akun_id": 4,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 34,
+        "akun_id": 3,
+        "penginput_id": 1,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 1,
+          "name": "Test User Biasa",
+          "email": "test@example.com",
+          "role": "biasa",
+          "status": "Aktif",
+          "profile_image": null,
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      },
+      {
+        "id": 72,
+        "akun_id": 5,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BCA",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 56,
+        "akun_id": 4,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Dana BOS",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 40,
+        "akun_id": 3,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 2,
+        "deskripsi": "Pengeluaran Dana Bank BRI",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 2,
+          "nama": "Ketua Pemuda",
+          "valuasi_transaksi": 500000
+        }
+      },
+      {
+        "id": 6,
+        "akun_id": 1,
+        "penginput_id": 2,
+        "penanggung_jawab_id": 1,
+        "deskripsi": "Pengeluaran Dana Kas Pemuda",
+        "date": "2026-06-13",
+        "jenis_transaksi": "pengeluaran",
+        "jumlah": 500000,
+        "bukti": null,
+        "bukti_public_id": null,
+        "akun": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "penginput": {
+          "id": 2,
+          "name": "Fauzan Trisuladana",
+          "email": "fauzantrisuladana@gmail.com",
+          "role": "bendahara",
+          "status": "Aktif",
+          "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c",
+          "has_password": true
+        },
+        "penanggung_jawab": {
+          "id": 1,
+          "nama": "Bendahara Pemuda",
+          "valuasi_transaksi": 1000000
+        }
+      }
+    ],
+    "mutasi": [
+      {
+        "id": 7,
+        "akun_debit_id": 3,
+        "akun_kredit_id": 5,
+        "date": "2026-06-14",
+        "jumlah": 200000,
+        "keterangan": "Transfer antar bank untuk likuiditas",
+        "akun_debit": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 6,
+        "akun_debit_id": 2,
+        "akun_kredit_id": 5,
+        "date": "2026-06-13",
+        "jumlah": 75000,
+        "keterangan": "Transfer ke Bank BCA untuk keperluan administrasi",
+        "akun_debit": {
+          "id": 2,
+          "nama_akun": "Kas AN",
+          "kas": "17 an",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 5,
+          "nama_akun": "Bank BCA",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 5,
+        "akun_debit_id": 1,
+        "akun_kredit_id": 4,
+        "date": "2026-06-12",
+        "jumlah": 150000,
+        "keterangan": "Penggunaan Dana BOS untuk rapat koordinasi",
+        "akun_debit": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 4,
+        "akun_debit_id": 4,
+        "akun_kredit_id": 1,
+        "date": "2026-06-10",
+        "jumlah": 500000,
+        "keterangan": "Penerimaan Dana BOS untuk kegiatan pemuda",
+        "akun_debit": {
+          "id": 4,
+          "nama_akun": "Dana BOS",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 3,
+        "akun_debit_id": 1,
+        "akun_kredit_id": 3,
+        "date": "2026-06-08",
+        "jumlah": 250000,
+        "keterangan": "Setoran ke Bank BRI untuk operasional",
+        "akun_debit": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 3,
+          "nama_akun": "Bank BRI",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 2,
+        "akun_debit_id": 2,
+        "akun_kredit_id": 1,
+        "date": "2026-06-06",
+        "jumlah": 50000,
+        "keterangan": "Pengembalian dana dari Kas AN ke Kas Pemuda",
+        "akun_debit": {
+          "id": 2,
+          "nama_akun": "Kas AN",
+          "kas": "17 an",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      },
+      {
+        "id": 1,
+        "akun_debit_id": 1,
+        "akun_kredit_id": 2,
+        "date": "2026-06-04",
+        "jumlah": 100000,
+        "keterangan": "Mutasi dari Kas Pemuda ke Kas AN",
+        "akun_debit": {
+          "id": 1,
+          "nama_akun": "Kas Pemuda",
+          "kas": "kas pemuda",
+          "jumlah": "0.00",
+          "keterangan": null
+        },
+        "akun_kredit": {
+          "id": 2,
+          "nama_akun": "Kas AN",
+          "kas": "17 an",
+          "jumlah": "0.00",
+          "keterangan": null
+        }
+      }
+    ],
+    "posisi_keuangan": [
+      {
+        "nama_akun": "Kas Pemuda",
+        "saldo_awal": 0,
+        "pemasukan": 7900000,
+        "pengeluaran": 4550000,
+        "total": 3350000,
+        "riil": 0,
+        "selisih": 3350000,
+        "keterangan": "Uang Kurang"
+      },
+      {
+        "nama_akun": "Bank BRI",
+        "saldo_awal": 0,
+        "pemasukan": 8200000,
+        "pengeluaran": 4250000,
+        "total": 3950000,
+        "riil": 0,
+        "selisih": 3950000,
+        "keterangan": "Uang Kurang"
+      },
+      {
+        "nama_akun": "Dana BOS",
+        "saldo_awal": 0,
+        "pemasukan": 8500000,
+        "pengeluaran": 4150000,
+        "total": 4350000,
+        "riil": 0,
+        "selisih": 4350000,
+        "keterangan": "Uang Kurang"
+      },
+      {
+        "nama_akun": "Bank BCA",
+        "saldo_awal": 0,
+        "pemasukan": 8000000,
+        "pengeluaran": 4275000,
+        "total": 3725000,
+        "riil": 0,
+        "selisih": 3725000,
+        "keterangan": "Uang Kurang"
+      }
+    ]
+  },
+  "summary": {
+    "total_pemasukan": "31400000",
+    "total_pengeluaran": "16000000",
+    "saldo_awal": 0,
+    "kas_sekarang": 15400000
+  }
+}
