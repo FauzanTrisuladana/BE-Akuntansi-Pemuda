@@ -45,7 +45,7 @@ class LaporanController extends Controller
         $summary = Transaksi::laporanFilter(
             tanggal_mulai: $validated['tanggal_mulai'] ?? null,
             tanggal_selesai: $validated['tanggal_selesai'] ?? null,
-            jenis_transaksi: $validated['jenis_transaksi'] ?? null,
+            jenis_transaksi: null,
             kas: $validated['kas'] ?? null,
             akun: $validated['akun'] ?? null,
         )
