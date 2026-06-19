@@ -1,0 +1,83 @@
+{
+  "v": 12,
+  "id": "cmqfxmzbs0ie3hh1mgsnparjz",
+  "name": "Laporan - Get laporan",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "cmqdgut0w00hhhh1mjgc6c8pw",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Laporan",
+      "method": "GET",
+      "params": [
+        {
+          "key": "tanggal_mulai",
+          "value": "2026-6-1",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "tanggal_selesai",
+          "value": "2026-6-16",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "jenis_transaksi[]",
+          "value": "pemasukan",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "jenis_transaksi[]",
+          "value": "pengeluaran",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "kas",
+          "value": "kas pemuda",
+          "active": true,
+          "description": ""
+        },
+        {
+          "key": "akun",
+          "value": "",
+          "active": false,
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil daftar transaksi dengan filter (search, tanggal, jenis, kas, akun) dan pagination",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/laporan",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}
