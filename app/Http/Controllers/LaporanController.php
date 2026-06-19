@@ -8,6 +8,7 @@ use App\Models\MutasiRekening;
 use App\Models\PosisiKeuangan;
 use App\Models\Transaksi;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Http\Response;
 
 class LaporanController extends Controller
 {
@@ -71,7 +72,7 @@ class LaporanController extends Controller
             ->additional(['summary' => $summary]);
     }
 
-    public function pdf(IndexLaporanRequest $request)
+    public function pdf(IndexLaporanRequest $request): Response
     {
         $validated = $request->validated();
 
