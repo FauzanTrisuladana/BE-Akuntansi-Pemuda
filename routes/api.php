@@ -53,7 +53,10 @@ Route::middleware('auth:sanctum')->group(function () {
      * Route untuk laporan
      * Get /api/laporan -> get laporan berdasarkan filter yang diberikan
      */
-    Route::get('/laporan', [LaporanController::class, 'index']);
+    Route::prefix('laporan')->controller(LaporanController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::get('/pdf', 'pdf');
+    });
 
     /**
      * Routes untuk role bendahara
