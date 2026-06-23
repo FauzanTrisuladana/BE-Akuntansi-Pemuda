@@ -133,7 +133,7 @@ class LaporanController extends Controller
             'kas' => $validated['kas'],
         ];
 
-        $pdf = Pdf::loadView('laporan.pdf', $data);
+        $pdf = Pdf::loadView('laporan.pdf', $data)->setPaper('a4', 'landscape');
 
         return $pdf->download('laporan-keuangan.pdf');
     }
