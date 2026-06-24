@@ -208,7 +208,6 @@
                     <th style="width: auto;">Tanggal</th>
                     <th style="width: auto;">Deskripsi</th>
                     <th style="width: auto;">Akun</th>
-                    <th style="width: auto;">Penanggung Jawab</th>
                     <th class="text-center" style="width: 15%;">Tipe</th>
                     <th class="text-right" style="width: auto;">Jumlah</th>
                 </tr>
@@ -220,7 +219,6 @@
                     <td>{{ \Carbon\Carbon::parse($t->date)->format('d/m/Y') }}</td>
                     <td>{{ $t->deskripsi ?? '-' }}</td>
                     <td>{{ $t->akun->nama_akun ?? '-' }}</td>
-                    <td>{{ $t->penanggungJawab->nama ?? '-' }}</td>
                     <td class="text-center">
                         @if(strtolower($t->jenis_transaksi) == 'pemasukan')
                             <span class="badge badge-pemasukan">{{ ucfirst($t->jenis_transaksi) }}</span>
