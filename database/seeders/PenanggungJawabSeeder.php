@@ -13,13 +13,23 @@ class PenanggungJawabSeeder extends Seeder
     public function run(): void
     {
         PenanggungJawab::create([
-            'nama' => 'Bendahara Pemuda',
-            'valuasi_transaksi' => 1000000,
+            'nama' => 'Bila',
+            'valuasi_transaksi' => 0,
         ]);
 
         PenanggungJawab::create([
-            'nama' => 'Ketua Pemuda',
-            'valuasi_transaksi' => 500000,
+            'nama' => 'Fauzan',
+            'valuasi_transaksi' => 0,
+        ]);
+
+        PenanggungJawab::create([
+            'nama' => 'Badi',
+            'valuasi_transaksi' => 0,
+        ]);
+
+        PenanggungJawab::create([
+            'nama' => 'Andri',
+            'valuasi_transaksi' => 0,
         ]);
     }
 }

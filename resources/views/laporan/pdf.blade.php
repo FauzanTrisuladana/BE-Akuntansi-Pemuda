@@ -19,89 +19,97 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #0ea5e9;
-            padding: 20px 15px;
-            background-color: #e0f2fe;
+            margin-bottom: 25px;
+            padding: 25px 20px;
+            background-color: #0c4a6e;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(12, 74, 110, 0.15);
         }
         .header h1 {
             margin: 0;
-            font-size: 20pt;
-            color: #0c4a6e;
+            font-size: 24pt;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         .header p {
-            margin: 8px 0;
-            font-size: 11pt;
-            color: #075985;
+            margin: 10px 0;
+            font-size: 12pt;
+            opacity: 0.95;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             background-color: white;
-            padding: 15px;
-            border: 1px solid #bae6fd;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
             page-break-before: always;
-        }
-        .section-first {
-            margin-bottom: 20px;
-            background-color: white;
-            padding: 15px;
-            border: 1px solid #bae6fd;
-            page-break-before: avoid;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
         .section h2 {
-            font-size: 14pt;
-            margin: 0 0 10px 0;
-            padding-bottom: 8px;
+            font-size: 16pt;
+            margin: 0 0 12px 0;
+            padding-bottom: 10px;
             color: #0c4a6e;
             font-weight: bold;
-            border-bottom: 2px solid #0ea5e9;
+            border-bottom: 3px solid #0ea5e9;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             table-layout: fixed;
+            border-radius: 6px;
+            overflow: hidden;
         }
         th {
             background-color: #0ea5e9;
             color: white;
-            padding: 10px 8px;
+            padding: 12px 10px;
             text-align: center;
             font-weight: bold;
-            font-size: 9pt;
+            font-size: 10pt;
+            border: none;
         }
         td {
-            border: 1px solid #cbd5e1;
-            padding: 8px;
+            border: 1px solid #e2e8f0;
+            padding: 10px;
             text-align: left;
             background-color: #fff;
+            transition: background-color 0.2s;
+        }
+        td:hover {
+            background-color: #f8fafc;
         }
         .text-right {
             text-align: right;
+            font-weight: 500;
         }
         .text-center {
             text-align: center;
+            font-weight: 500;
         }
         .summary-box {
             background-color: #f0f9ff;
             border: 2px solid #0ea5e9;
-            padding: 15px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(12, 74, 110, 0.1);
         }
         .summary-box h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: #0c4a6e;
-            font-size: 14pt;
+            font-size: 16pt;
             font-weight: bold;
-            border-bottom: 1px solid #0ea5e9;
-            padding-bottom: 5px;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 8px;
         }
         .summary-item {
             overflow: hidden;
-            margin-bottom: 8px;
-            padding: 6px 0;
+            margin-bottom: 10px;
+            padding: 8px 0;
             border-bottom: 1px dashed #7dd3fc;
         }
         .summary-item:last-child {
@@ -111,33 +119,36 @@
             font-weight: bold;
             float: left;
             color: #075985;
+            font-size: 11pt;
         }
         .summary-value {
             font-weight: bold;
             float: right;
             color: #0c4a6e;
+            font-size: 11pt;
         }
         .page-break {
             page-break-after: always;
         }
         .badge {
-            padding: 4px 10px;
+            padding: 4px 12px;
             font-weight: bold;
-            font-size: 9pt;
+            font-size: 10pt;
+            border-radius: 4px;
         }
         .badge-pemasukan {
-            background-color: #bbf7d0;
-            color: #15803d;
-            border: 1px solid #4ade80;
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #22c55e;
         }
         .badge-pengeluaran {
-            background-color: #fecaca;
-            color: #be1235;
-            border: 1px solid #fb7185;
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
         }
         .signature-table {
             width: 100%;
-            margin-top: 50px;
+            margin-top: 60px;
             border: none;
         }
         .signature-cell {
@@ -146,18 +157,18 @@
             border: none;
         }
         .signature-line {
-            border-top: 2px solid #333;
-            width: 200px;
-            margin: 40px auto 10px;
+            border-top: 3px solid #0c4a6e;
+            width: 250px;
+            margin: 50px auto 15px;
         }
         .signature-name {
             font-weight: bold;
             color: #0c4a6e;
-            font-size: 11pt;
+            font-size: 12pt;
         }
         .signature-title {
             color: #475569;
-            font-size: 10pt;
+            font-size: 11pt;
         }
     </style>
 </head>
@@ -188,7 +199,7 @@
         </div>
     </div>
 
-    <div class="section-first">
+    <div class="section">
         <h2>Transaksi</h2>
         <table>
             <thead>

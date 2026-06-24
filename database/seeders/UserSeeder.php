@@ -14,37 +14,16 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'Test User Biasa',
-            'email' => 'test@example.com',
-            'role' => 'biasa',
-            'status' => 'Aktif',
-            'password' => Hash::make('password'),
-            'activated_at' => now(),
-        ]);
-
-        User::create([
-            'name' => 'Test User Bendahara',
+            'name' => 'Fauzan Trisuladana',
             'email' => 'fauzantrisuladana@gmail.com',
             'role' => 'bendahara',
             'status' => 'Aktif',
+            'provider' => 'google',
+            'id_provider' => '105102120350029888485',
+            'profile_image' => 'https://lh3.googleusercontent.com/a/ACg8ocJgjcrmN_OSQiAu_cwa0iqqeCT2DJCNExzdL7ztc3_I2er2KRM1=s96-c',
+            'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'activated_at' => now(),
-        ]);
-
-        User::create([
-            'name' => 'User Pending',
-            'email' => 'pending@example.com',
-            'role' => 'biasa',
-            'status' => 'Pending',
-            'password' => Hash::make('password'),
-        ]);
-
-        User::create([
-            'name' => 'User Tidak Aktif',
-            'email' => 'inactive@example.com',
-            'role' => 'bendahara',
-            'status' => 'Tidak Aktif',
-            'password' => Hash::make('password'),
         ]);
     }
 }

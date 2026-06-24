@@ -84,7 +84,8 @@ class LaporanController extends Controller
                 kas: $validated['kas'] ?? null,
                 akun: $validated['akun'] ?? null,
             )
-            ->orderBy('date', 'desc')
+            ->orderBy('date', 'asc')
+            ->orderBy('id', 'asc')
             ->get();
 
         $mutasi = MutasiRekening::with(['akunDebit', 'akunKredit'])

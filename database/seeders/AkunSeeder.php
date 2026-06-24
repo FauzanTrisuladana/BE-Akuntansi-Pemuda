@@ -13,28 +13,27 @@ class AkunSeeder extends Seeder
     public function run(): void
     {
         Akun::create([
-            'nama_akun' => 'Kas Pemuda',
+            'riil_terakhir' => null,
+            'nama_akun' => 'Cash Bila',
             'kas' => 'kas pemuda',
+            'jumlah' => 0,
+            'keterangan' => 'Kas yang dipegang Bila',
         ]);
 
         Akun::create([
-            'nama_akun' => 'Kas AN',
-            'kas' => '17 an',
+            'riil_terakhir' => null,
+            'nama_akun' => 'Cash',
+            'kas' => 'kas pemuda',
+            'jumlah' => 54000,
+            'keterangan' => 'Kas yang dipegang Fauzan',
         ]);
 
         Akun::create([
-            'nama_akun' => 'Bank BRI',
+            'riil_terakhir' => null,
+            'nama_akun' => 'Rekening',
             'kas' => 'kas pemuda',
-        ]);
-
-        Akun::create([
-            'nama_akun' => 'Dana BOS',
-            'kas' => 'kas pemuda',
-        ]);
-
-        Akun::create([
-            'nama_akun' => 'Bank BCA',
-            'kas' => 'kas pemuda',
+            'jumlah' => 1249500,
+            'keterangan' => 'Uang yang ada di rekening',
         ]);
     }
 }
