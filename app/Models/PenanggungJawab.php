@@ -13,12 +13,9 @@ class PenanggungJawab extends Model
 
     protected $fillable = [
         'nama',
-        'valuasi_transaksi',
     ];
 
-    protected $casts = [
-        'valuasi_transaksi' => 'integer',
-    ];
+    protected $casts = [];
 
     public function transaksi()
     {

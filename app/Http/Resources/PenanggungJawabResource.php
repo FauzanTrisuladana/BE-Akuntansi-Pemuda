@@ -16,7 +16,6 @@ class PenanggungJawabResource extends ApiResource
         return [
             'id' => $this->whenHas('id'),
             'nama' => $this->whenHas('nama'),
-            'valuasi_transaksi' => $this->whenHas('valuasi_transaksi'),
 
             'transaksi' => TransaksiResource::collection($this->whenLoaded('transaksi')),
         ];
