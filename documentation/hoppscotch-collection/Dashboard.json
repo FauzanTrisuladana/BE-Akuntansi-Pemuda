@@ -1,0 +1,48 @@
+{
+  "v": 12,
+  "id": "dashboard-collection",
+  "name": "Dashboard - Dashboard",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "id": "dashboard-index",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": null,
+        "contentType": null
+      },
+      "name": "Get Dashboard",
+      "method": "GET",
+      "params": [
+        {
+          "key": "kas",
+          "value": "kas pemuda",
+          "active": true
+        }
+      ],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>",
+      "responses": {},
+      "testScript": "",
+      "description": "Mengambil data dashboard (summary pemasukan, pengeluaran, total saldo)",
+      "preRequestScript": "",
+      "requestVariables": []
+    }
+  ],
+  "headers": [],
+  "variables": [
+    {
+      "key": "prefix",
+      "initialValue": "/dashboard",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null,
+  "preRequestScript": "",
+  "testScript": ""
+}

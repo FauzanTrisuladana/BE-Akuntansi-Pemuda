@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HistoryRiilController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MutasiRekeningController;
@@ -56,6 +57,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('laporan')->controller(LaporanController::class)->group(function () {
         Route::get('/', 'index');
         Route::get('/pdf', 'pdf');
+    });
+
+    /**
+     * Route untuk dashboard
+     * Get /api/dashboard -> get data untuk dashboard
+     */
+    Route::prefix('dashboard')->controller(DashboardController::class)->group(function () {
+        Route::get('/', 'index');
     });
 
     /**

@@ -2,10 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Akun;
-use App\Models\PenanggungJawab;
 use App\Models\Transaksi;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class TransaksiSeeder extends Seeder

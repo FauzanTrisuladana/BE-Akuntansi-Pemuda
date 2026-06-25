@@ -1,0 +1,751 @@
+{
+  "status": "success",
+  "message": "Data untuk dashboard berhasil diambil",
+  "data": {
+    "saldo_awal": 2164000,
+    "saldo_daily": [
+      {
+        "tanggal": "2026-06-01",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 2164000
+      },
+      {
+        "tanggal": "2026-06-02",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 2164000
+      },
+      {
+        "tanggal": "2026-06-03",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 2164000
+      },
+      {
+        "tanggal": "2026-06-04",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 2164000
+      },
+      {
+        "tanggal": "2026-06-05",
+        "pemasukan": "0",
+        "pengeluaran": "262500",
+        "saldo": 1901500
+      },
+      {
+        "tanggal": "2026-06-06",
+        "pemasukan": "0",
+        "pengeluaran": "80000",
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-07",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-08",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-09",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-10",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-11",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-12",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-13",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1821500
+      },
+      {
+        "tanggal": "2026-06-14",
+        "pemasukan": "0",
+        "pengeluaran": "34000",
+        "saldo": 1787500
+      },
+      {
+        "tanggal": "2026-06-15",
+        "pemasukan": "0",
+        "pengeluaran": "105000",
+        "saldo": 1682500
+      },
+      {
+        "tanggal": "2026-06-16",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1682500
+      },
+      {
+        "tanggal": "2026-06-17",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1682500
+      },
+      {
+        "tanggal": "2026-06-18",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1682500
+      },
+      {
+        "tanggal": "2026-06-19",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1682500
+      },
+      {
+        "tanggal": "2026-06-20",
+        "pemasukan": "0",
+        "pengeluaran": "315000",
+        "saldo": 1367500
+      },
+      {
+        "tanggal": "2026-06-21",
+        "pemasukan": "0",
+        "pengeluaran": "64000",
+        "saldo": 1303500
+      },
+      {
+        "tanggal": "2026-06-22",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1303500
+      },
+      {
+        "tanggal": "2026-06-23",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1303500
+      },
+      {
+        "tanggal": "2026-06-24",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1303500
+      },
+      {
+        "tanggal": "2026-06-25",
+        "pemasukan": 0,
+        "pengeluaran": 0,
+        "saldo": 1303500
+      }
+    ],
+    "saldo_per_akun": [
+      {
+        "tanggal": "2026-06-01",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "2164000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": 0
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-02",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "2164000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": 0
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-03",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "2164000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": 0
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-04",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "2164000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": 0
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-05",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1742500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-06",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-07",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-08",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-09",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-10",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-11",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-12",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-13",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1662500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-14",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "159000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-15",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-16",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-17",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-18",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-19",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1628500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-20",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1313500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-21",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1249500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-22",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1249500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-23",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1249500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-24",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1249500.00"
+          }
+        ]
+      },
+      {
+        "tanggal": "2026-06-25",
+        "akun": [
+          {
+            "nama_akun": "Cash Bila",
+            "saldo": "0.00"
+          },
+          {
+            "nama_akun": "Cash",
+            "saldo": "54000.00"
+          },
+          {
+            "nama_akun": "Rekening",
+            "saldo": "1249500.00"
+          }
+        ]
+      }
+    ],
+    "rekonsiliasi": [
+      {
+        "tanggal": "2026-06-01",
+        "sistem": 2164000,
+        "riil": 2164000,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-02",
+        "sistem": 2164000,
+        "riil": 2164000,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-03",
+        "sistem": 2164000,
+        "riil": 2164000,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-04",
+        "sistem": 2164000,
+        "riil": 2164000,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-05",
+        "sistem": 1901500,
+        "riil": 1901500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-06",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-07",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-08",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-09",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-10",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-11",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-12",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-13",
+        "sistem": 1821500,
+        "riil": 1821500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-14",
+        "sistem": 1787500,
+        "riil": 1787500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-15",
+        "sistem": 1682500,
+        "riil": 1682500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-16",
+        "sistem": 1682500,
+        "riil": 1682500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-17",
+        "sistem": 1682500,
+        "riil": 1682500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-18",
+        "sistem": 1682500,
+        "riil": 1682500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-19",
+        "sistem": 1682500,
+        "riil": 1682500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-20",
+        "sistem": 1367500,
+        "riil": 1367500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-21",
+        "sistem": 1303500,
+        "riil": 1303500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-22",
+        "sistem": 1303500,
+        "riil": 1303500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-23",
+        "sistem": 1303500,
+        "riil": 1303500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-24",
+        "sistem": 1303500,
+        "riil": 1303500,
+        "verified": false
+      },
+      {
+        "tanggal": "2026-06-25",
+        "sistem": 1303500,
+        "riil": 1303500,
+        "verified": false
+      }
+    ]
+  },
+  "summary": {
+    "pemasukan": {
+      "total": "0",
+      "change": -100
+    },
+    "pengeluaran": {
+      "total": "860500",
+      "change": -77.74
+    },
+    "totalSaldo": {
+      "total": 1303500
+    }
+  }
+}
