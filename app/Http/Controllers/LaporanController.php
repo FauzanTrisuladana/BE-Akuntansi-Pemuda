@@ -65,6 +65,30 @@ class LaporanController extends Controller
         $summary->saldo_awal = $totalSaldoAwal;
         $summary->kas_sekarang = $kasSekarang;
 
+        if ($validated['akun'] ?? null) {
+            $pemasukanAkun = MutasiRekening::laporanFilter(
+                tanggal_mulai: $validated['tanggal_mulai'] ?? null,
+                tanggal_selesai: $validated['tanggal_selesai'] ?? null,
+                kas: $validated['kas'] ?? null,
+                akun: $validated['akun'] ?? null,
+            )
+            ->where('akun_debit_id', $validated['akun'])
+            ->sum('jumlah');
+
+            $pengeluaranAkun = MutasiRekening::laporanFilter(
+                tanggal_mulai: $validated['tanggal_mulai'] ?? null,
+                tanggal_selesai: $validated['tanggal_selesai'] ?? null,
+                kas: $validated['kas'] ?? null,
+                akun: $validated['akun'] ?? null,
+            )
+            ->where('akun_kredit_id', $validated['akun'])
+            ->sum('jumlah');
+
+            $summary->total_pemasukan += $pemasukanAkun;
+            $summary->total_pengeluaran += $pengeluaranAkun;
+            $summary->kas_sekarang += $pemasukanAkun - $pengeluaranAkun;
+        }
+
         return LaporanResource::make((object) [
             'transaksi' => $transaksi,
             'mutasi' => $mutasi,
@@ -126,6 +150,30 @@ class LaporanController extends Controller
 
         $summary->saldo_awal = $totalSaldoAwal;
         $summary->kas_sekarang = $kasSekarang;
+
+        if ($validated['akun'] ?? null) {
+            $pemasukanAkun = MutasiRekening::laporanFilter(
+                tanggal_mulai: $validated['tanggal_mulai'] ?? null,
+                tanggal_selesai: $validated['tanggal_selesai'] ?? null,
+                kas: $validated['kas'] ?? null,
+                akun: $validated['akun'] ?? null,
+            )
+            ->where('akun_debit_id', $validated['akun'])
+            ->sum('jumlah');
+
+            $pengeluaranAkun = MutasiRekening::laporanFilter(
+                tanggal_mulai: $validated['tanggal_mulai'] ?? null,
+                tanggal_selesai: $validated['tanggal_selesai'] ?? null,
+                kas: $validated['kas'] ?? null,
+                akun: $validated['akun'] ?? null,
+            )
+            ->where('akun_kredit_id', $validated['akun'])
+            ->sum('jumlah');
+
+            $summary->total_pemasukan += $pemasukanAkun;
+            $summary->total_pengeluaran += $pengeluaranAkun;
+            $summary->kas_sekarang += $pemasukanAkun - $pengeluaranAkun;
+        }
 
         $data = [
             'transaksi' => $transaksi,
