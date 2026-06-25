@@ -72,8 +72,8 @@ class LaporanController extends Controller
                 kas: $validated['kas'] ?? null,
                 akun: $validated['akun'] ?? null,
             )
-            ->where('akun_debit_id', $validated['akun'])
-            ->sum('jumlah');
+                ->where('akun_debit_id', $validated['akun'])
+                ->sum('jumlah');
 
             $pengeluaranAkun = MutasiRekening::laporanFilter(
                 tanggal_mulai: $validated['tanggal_mulai'] ?? null,
@@ -81,8 +81,8 @@ class LaporanController extends Controller
                 kas: $validated['kas'] ?? null,
                 akun: $validated['akun'] ?? null,
             )
-            ->where('akun_kredit_id', $validated['akun'])
-            ->sum('jumlah');
+                ->where('akun_kredit_id', $validated['akun'])
+                ->sum('jumlah');
 
             $summary->total_pemasukan += $pemasukanAkun;
             $summary->total_pengeluaran += $pengeluaranAkun;
@@ -158,8 +158,8 @@ class LaporanController extends Controller
                 kas: $validated['kas'] ?? null,
                 akun: $validated['akun'] ?? null,
             )
-            ->where('akun_debit_id', $validated['akun'])
-            ->sum('jumlah');
+                ->where('akun_debit_id', $validated['akun'])
+                ->sum('jumlah');
 
             $pengeluaranAkun = MutasiRekening::laporanFilter(
                 tanggal_mulai: $validated['tanggal_mulai'] ?? null,
@@ -167,8 +167,8 @@ class LaporanController extends Controller
                 kas: $validated['kas'] ?? null,
                 akun: $validated['akun'] ?? null,
             )
-            ->where('akun_kredit_id', $validated['akun'])
-            ->sum('jumlah');
+                ->where('akun_kredit_id', $validated['akun'])
+                ->sum('jumlah');
 
             $summary->total_pemasukan += $pemasukanAkun;
             $summary->total_pengeluaran += $pengeluaranAkun;

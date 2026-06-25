@@ -59,5 +59,7 @@ parameters:
         - '#nullCoalesce.variable#'
         - '#Expression on left side of \\?\\? is not nullable#'
         - '#Variable .* on left side of \\?\\? always exists#'
+        - '#Offset .* on non-empty-array#'
+        - '#nullCoalesce.offset#'
         # Ignore variadic string parameter type issue in RoleMiddleware
         - '#Parameter \$roles of method App\\Http\\Middleware\\RoleMiddleware#'
