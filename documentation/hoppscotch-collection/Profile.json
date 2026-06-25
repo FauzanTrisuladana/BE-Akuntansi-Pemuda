@@ -72,6 +72,37 @@
     },
     {
       "v": "17",
+      "id": "profile-update-photo",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "body": [
+          {
+            "key": "profile_image",
+            "value": [
+              {}
+            ],
+            "active": true,
+            "isFile": true
+          }
+        ],
+        "contentType": "multipart/form-data"
+      },
+      "name": "Update Photo",
+      "method": "POST",
+      "params": [],
+      "headers": [],
+      "endpoint": "<<link>><<prefix>>/update-photo",
+      "responses": {},
+      "testScript": "",
+      "description": "Update foto profile user yang sedang login (upload file gambar)",
+      "preRequestScript": "",
+      "requestVariables": []
+    },
+    {
+      "v": "17",
       "id": "profile-delete",
       "auth": {
         "authType": "inherit",

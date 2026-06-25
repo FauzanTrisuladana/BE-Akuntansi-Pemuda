@@ -25,6 +25,7 @@ class User extends Authenticatable
         'role',
         'status',
         'profile_image',
+        'profile_image_public_id',
         'provider',
         'id_provider',
         'password',

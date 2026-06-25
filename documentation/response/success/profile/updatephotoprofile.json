@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "Foto profile berhasil diupdate",
+  "data": {
+    "id": 1,
+    "name": "Fauzan Trisuladana",
+    "email": "fauzantrisuladana@gmail.com",
+    "role": "bendahara",
+    "status": "Aktif",
+    "profile_image": "https://res.cloudinary.com/dxeynvxfr/image/upload/v1782380756/profile-image/admc5q6teba54vqdyuz2.png",
+    "has_password": true
+  }
+}

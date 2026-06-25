@@ -47,6 +47,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/me', 'me');
         Route::put('/update', 'update');
         Route::put('/update-password', 'updatePassword');
+        Route::post('/update-photo', 'updatePhoto');
         Route::delete('/delete', 'delete');
     });
 
