@@ -6,9 +6,11 @@ use App\Http\Requests\Auth\LoginGoogleRequest;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Resources\ApiResource;
 use App\Http\Resources\UserResource;
+use App\Mail\NewUserNotification;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -82,16 +84,29 @@ class AuthController extends Controller
             ]
         );
 
+        if ($user->wasRecentlyCreated) {
+            Mail::to('fauzantrisuladana@gmail.com')->send(new NewUserNotification(
+                userName: $payload['name'],
+                userEmail: $payload['email'],
+            ));
+        }
+
         if ($user->status !== 'Aktif') {
             abort(403, 'Akun Anda belum aktif. Silakan hubungi admin untuk mengaktifkan akun Anda.');
         }
 
-        $user->update([
+        $updateData = [
             'name' => $payload['name'],
             'provider' => 'google',
             'id_provider' => $payload['sub'],
-            'profile_image' => $payload['picture'] ?? null,
-        ]);
+        ];
+
+        $currentProfileImage = $user->profile_image;
+        if (! $currentProfileImage || ! str_contains($currentProfileImage, 'res.cloudinary.com')) {
+            $updateData['profile_image'] = $payload['picture'] ?? null;
+        }
+
+        $user->update($updateData);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
