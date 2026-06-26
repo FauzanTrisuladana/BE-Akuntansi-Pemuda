@@ -11,6 +11,7 @@
         <li><strong>Email:</strong> {{ $userEmail }}</li>
     </ul>
     <p>Silakan cek ke aplikasi untuk mengaktifkan akun user tersebut.</p>
+    <p><a href="https://kpngt5.trisuladana.com/users">Kelola User</a></p>
     <br>
     <p>Terima kasih.</p>
 </body>

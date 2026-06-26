@@ -8,7 +8,9 @@ use App\Http\Requests\User\UpdateUserRequest;
 use App\Http\Resources\ApiResource;
 use App\Http\Resources\ApiResourceCollection;
 use App\Http\Resources\UserResource;
+use App\Mail\UserActivatedNotification;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -97,6 +99,16 @@ class UserController extends Controller
         $user->update([
             'status' => $user->status === 'Aktif' ? 'Tidak Aktif' : 'Aktif',
         ]);
+
+        if ($user->status === 'Aktif' && is_null($user->activated_at)) {
+            $user->update([
+                'activated_at' => now(),
+            ]);
+
+            Mail::to($user->email)->send(new UserActivatedNotification(
+                userName: $user->name,
+            ));
+        }
 
         return (new UserResource($user))
             ->message("Status user berhasil diubah menjadi {$user->status}");
