@@ -121,7 +121,7 @@ class MutasiRekeningController extends Controller
                 ->orderBy('id', 'desc')
                 ->first();
             $jumlahDebit = $riilDebit ? $riilDebit->riil : 0;
-            $jumlahDebit += $validated['jumlah'];
+            $jumlahDebit = $jumlahDebit + $validated['jumlah']-$jumlahLama;
             RiilHistory::updateOrCreate([
                 'akun_id' => $akunDebitId,
                 'date' => $date,
@@ -137,7 +137,7 @@ class MutasiRekeningController extends Controller
                 ->orderBy('id', 'desc')
                 ->first();
             $jumlahKredit = $riilKredit ? $riilKredit->riil : 0;
-            $jumlahKredit -= $validated['jumlah'];
+            $jumlahKredit = $jumlahKredit - $validated['jumlah'] + $jumlahLama;
             RiilHistory::updateOrCreate([
                 'akun_id' => $akunKreditId,
                 'date' => $date,
