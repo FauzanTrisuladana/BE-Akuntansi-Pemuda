@@ -293,7 +293,7 @@
                     <td class="text-right">Rp {{ number_format($p->saldo_awal, 0, ',', '.') }}</td>
                     <td class="text-right">Rp {{ number_format($p->pemasukan, 0, ',', '.') }}</td>
                     <td class="text-right">Rp {{ number_format($p->pengeluaran, 0, ',', '.') }}</td>
-                    <td class="text-right">Rp {{ number_format($p->total, 0, ',', '.') }}</td>
+                    <td class="text-right">Rp {{ number_format($p->saldo_akhir, 0, ',', '.') }}</td>
                     <td class="text-right">Rp {{ number_format($p->riil, 0, ',', '.') }}</td>
                     <td class="text-right">Rp {{ number_format($p->selisih, 0, ',', '.') }}</td>
                     <td>{{ $p->keterangan }}</td>
