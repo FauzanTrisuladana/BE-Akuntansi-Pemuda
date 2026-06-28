@@ -3,7 +3,6 @@
 namespace App\Http\Requests\MutasiRekening;
 
 use App\Models\Akun;
-use App\Models\RiilHistory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -76,23 +75,7 @@ class StoreMutasiRekeningRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $historyRiil = RiilHistory::where('verified', true)
-            ->where(function ($q) {
-                $q->where('date', '>', $this->input('date'))
-                    ->orWhere(function ($q2) {
-                        $q2->where('date', $this->input('date'))
-                            ->where('akun_id', $this->input('akun_debit_id'));
-                    })
-                    ->orWhere(function ($q2) {
-                        $q2->where('date', $this->input('date'))
-                            ->where('akun_id', $this->input('akun_kredit_id'));
-                    });
-            })->exists();
-        $validator->after(function ($validator) use ($historyRiil) {
-            if ($historyRiil) {
-                $validator->errors()->add('date', 'Tidak dapat membuat mutasi rekening pada tanggal ini karena sudah ada riil history yang terverifikasi setelahnya');
-            }
-
+        $validator->after(function ($validator) {
             if ($this->akun_debit_id == $this->akun_kredit_id) {
                 $validator->errors()->add('akun_kredit_id', 'Akun kredit tidak boleh sama dengan akun debit');
             }

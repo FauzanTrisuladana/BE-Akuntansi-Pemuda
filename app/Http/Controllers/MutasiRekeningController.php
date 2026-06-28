@@ -62,6 +62,7 @@ class MutasiRekeningController extends Controller
                 'date' => $validated['date'],
             ], [
                 'riil' => $jumlahDebit,
+                'verified' => false,
             ]);
 
             // Update riil history akun kredit - ambil dari riil history terakhir sebelum tanggal
@@ -77,6 +78,7 @@ class MutasiRekeningController extends Controller
                 'date' => $validated['date'],
             ], [
                 'riil' => $jumlahKredit,
+                'verified' => false,
             ]);
 
             // Update semua riil history setelah tanggal ini dengan nilai baru
@@ -125,6 +127,7 @@ class MutasiRekeningController extends Controller
                 'date' => $date,
             ], [
                 'riil' => $jumlahDebit,
+                'verified' => false,
             ]);
 
             // Update riil history akun kredit - ambil dari riil history terakhir sebelum tanggal
@@ -140,6 +143,7 @@ class MutasiRekeningController extends Controller
                 'date' => $date,
             ], [
                 'riil' => $jumlahKredit,
+                'verified' => false,
             ]);
 
             // Update semua riil history setelah tanggal ini dengan selisih
@@ -161,23 +165,6 @@ class MutasiRekeningController extends Controller
     {
         $mutasi = MutasiRekening::findOrFail($id);
 
-        $historyRiil = RiilHistory::where('verified', true)
-            ->where(function ($q) use ($mutasi) {
-                $q->where('date', '>', $mutasi->date)
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_debit_id);
-                    })
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_kredit_id);
-                    });
-            })->exists();
-
-        if ($historyRiil) {
-            abort(400, 'Mutasi rekening tidak bisa dihapus karena sudah ada history riil terkonfirmasi yang lebih baru');
-        }
-
         DB::transaction(function () use ($mutasi) {
             // Update riil history akun debit - ambil dari riil history terakhir sebelum tanggal
             $riilDebit = RiilHistory::where('akun_id', $mutasi->akun_debit_id)
@@ -192,6 +179,7 @@ class MutasiRekeningController extends Controller
                 'date' => $mutasi->date,
             ], [
                 'riil' => $jumlahDebit,
+                'verified' => false,
             ]);
 
             // Update riil history akun kredit - ambil dari riil history terakhir sebelum tanggal
@@ -207,6 +195,7 @@ class MutasiRekeningController extends Controller
                 'date' => $mutasi->date,
             ], [
                 'riil' => $jumlahKredit,
+                'verified' => false,
             ]);
 
             // Update semua riil history setelah tanggal ini dengan nilai baru
@@ -238,6 +227,7 @@ class MutasiRekeningController extends Controller
             } else {
                 $history->riil -= $selisih;
             }
+            $history->verified = false; // Set verified menjadi false karena ada perubahan
             $history->save();
         }
     }

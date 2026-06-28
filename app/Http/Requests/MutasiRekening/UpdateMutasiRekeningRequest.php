@@ -57,23 +57,11 @@ class UpdateMutasiRekeningRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $mutasi = MutasiRekening::findOrFail($this->route('mutasi_rekening'));
-        $historyRiil = RiilHistory::where('verified', true)
-            ->where(function ($q) use ($mutasi) {
-                $q->where('date', '>', $mutasi->date)
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_debit_id);
-                    })
-                    ->orWhere(function ($q2) use ($mutasi) {
-                        $q2->where('date', $mutasi->date)
-                            ->where('akun_id', $mutasi->akun_kredit_id);
-                    });
-            })->exists();
-        $validator->after(function ($validator) use ($mutasi, $historyRiil) {
-            if ($historyRiil && $mutasi->jumlah != $this->input('jumlah')) {
-                $validator->errors()->add('jumlah', 'Jumlah mutasi rekening ini tidak dapat diubah karena sudah ada history riil yang diverifikasi setelahnya.');
-            }
+        $validator->after(function ($validator) {
+            // ex:
+            // if ($this->something_invalid) {
+            //     $validator->errors()->add('field', 'Custom error');
+            // }
         });
     }
 

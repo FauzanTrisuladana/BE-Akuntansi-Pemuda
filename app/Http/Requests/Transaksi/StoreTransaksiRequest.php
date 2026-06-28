@@ -88,14 +88,11 @@ class StoreTransaksiRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $historyRiil = RiilHistory::where('verified', true)
-            ->where('akun_id', $this->input('akun_id'))
-            ->where('date', '>=', $this->input('date'))
-            ->exists();
-        $validator->after(function ($validator) use ($historyRiil) {
-            if ($historyRiil) {
-                $validator->errors()->add('date', 'Tidak dapat membuat transaksi dengan tanggal sebelum riil history terakhir yang sudah diverifikasi');
-            }
+        $validator->after(function ($validator) {
+            // ex:
+            // if ($this->something_invalid) {
+            //     $validator->errors()->add('field', 'Custom error');
+            // }
         });
     }
 

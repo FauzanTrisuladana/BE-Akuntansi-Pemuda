@@ -86,6 +86,7 @@ class TransaksiController extends Controller
                 'date' => $validated['date'],
             ], [
                 'riil' => $jumlah,
+                'verified' => false,
             ]);
 
             $this->updateRiilSetelahnya(
@@ -147,6 +148,7 @@ class TransaksiController extends Controller
                 'date' => $transaksi->date,
             ], [
                 'riil' => $jumlah,
+                'verified' => false,
             ]);
 
             $this->updateRiilSetelahnya(
@@ -184,6 +186,7 @@ class TransaksiController extends Controller
                 'date' => $transaksi->date,
             ], [
                 'riil' => $jumlah,
+                'verified' => false,
             ]);
 
             $this->updateRiilSetelahnya(
@@ -217,6 +220,7 @@ class TransaksiController extends Controller
             } else {
                 $history->riil -= $selisih;
             }
+            $history->verified = false; // Set verified menjadi false karena ada perubahan
             $history->save();
         }
     }

@@ -76,15 +76,11 @@ class UpdateTransaksiRequest extends FormRequest
      */
     public function withValidator($validator)
     {
-        $transaksi = Transaksi::findOrFail($this->route('transaksi'));
-        $riilHistory = RiilHistory::where('verified', true)
-            ->where('akun_id', $transaksi->akun_id)
-            ->where('date', '>=', $transaksi->date)
-            ->exists();
-        $validator->after(function ($validator) use ($transaksi, $riilHistory) {
-            if ($riilHistory && $transaksi->jumlah != $this->input('jumlah')) {
-                $validator->errors()->add('jumlah', 'Transaksi ini tidak dapat diubah jumlahnya karena sudah ada history riil yang diverifikasi setelahnya.');
-            }
+        $validator->after(function ($validator) {
+            // ex:
+            // if ($this->something_invalid) {
+            //     $validator->errors()->add('field', 'Custom error');
+            // }
         });
     }
 
