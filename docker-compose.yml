@@ -1,0 +1,24 @@
+services:
+    laravel:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: pemuda
+        ports:
+            - 8003:80
+        env_file:
+            - ./.env
+        volumes:
+            - local_data:/app/storage/app/public
+        networks:
+            - shared-net
+        restart: unless-stopped
+
+networks:
+  shared-net:
+    external: true
+
+volumes:
+  local_data:
+
+
