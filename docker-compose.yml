@@ -13,6 +13,11 @@ services:
         networks:
             - shared-net
         restart: always
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost/"]
+            interval: 5000s
+            timeout: 10s
+            retries: 3
 
 networks:
   shared-net:
